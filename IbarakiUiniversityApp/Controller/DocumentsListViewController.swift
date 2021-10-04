@@ -11,7 +11,7 @@ class DocumentsListViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
-    let DocumentData = [String]()
+    var DocumentItems = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +24,19 @@ class DocumentsListViewController: UIViewController{
 
 extension DocumentsListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        
+        DocumentItems = UserDefaults.standard.stringArray(forKey: "LabToDo")!
+        
+        return DocumentItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        DocumentItems = UserDefaults.standard.stringArray(forKey: "LabToDo")!
+        
+        cell.textLabel!.text = DocumentItems[indexPath.row]
+        return cell
     }
 }
 

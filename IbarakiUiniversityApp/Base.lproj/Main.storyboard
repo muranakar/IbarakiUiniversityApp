@@ -50,6 +50,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="研究室ToDo" selectedImage="study" id="fvX-e6-xB5"/>
                     <connections>
+                        <outlet property="tableView" destination="jdd-OP-dJf" id="p1N-uE-6fu"/>
                         <segue destination="z9S-XZ-gh4" kind="presentation" modalPresentationStyle="fullScreen" id="SFn-4U-68F"/>
                     </connections>
                 </viewController>
