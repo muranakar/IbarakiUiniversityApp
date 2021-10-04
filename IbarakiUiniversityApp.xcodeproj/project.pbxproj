@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5389600A270859A700198C54 /* SubumitDocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53896009270859A700198C54 /* SubumitDocumentModel.swift */; };
+		5389600C270859C300198C54 /* SubmitDocumentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389600B270859C300198C54 /* SubmitDocumentsPresenter.swift */; };
+		5389600E27085E2200198C54 /* LabToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389600D27085E2200198C54 /* LabToDoModel.swift */; };
+		5389601027085EF400198C54 /* LabToDoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389600F27085EF400198C54 /* LabToDoPresenter.swift */; };
 		53A58E0E2706F8BA008EC8D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E0D2706F8BA008EC8D7 /* AppDelegate.swift */; };
 		53A58E102706F8BA008EC8D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E0F2706F8BA008EC8D7 /* SceneDelegate.swift */; };
 		53A58E122706F8BA008EC8D7 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E112706F8BA008EC8D7 /* MainController.swift */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53896009270859A700198C54 /* SubumitDocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubumitDocumentModel.swift; sourceTree = "<group>"; };
+		5389600B270859C300198C54 /* SubmitDocumentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitDocumentsPresenter.swift; sourceTree = "<group>"; };
+		5389600D27085E2200198C54 /* LabToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabToDoModel.swift; sourceTree = "<group>"; };
+		5389600F27085EF400198C54 /* LabToDoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabToDoPresenter.swift; sourceTree = "<group>"; };
 		53A58E0A2706F8BA008EC8D7 /* IbarakiUiniversityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbarakiUiniversityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A58E0D2706F8BA008EC8D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53A58E0F2706F8BA008EC8D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,8 +74,10 @@
 			children = (
 				53A58E2327070802008EC8D7 /* View */,
 				53A58E22270707F8008EC8D7 /* Model */,
-				53A58E21270707E7008EC8D7 /* Controller */,
+				53A58E21270707E7008EC8D7 /* Presenter */,
 				53A58E132706F8BA008EC8D7 /* Main.storyboard */,
+				53A58E0D2706F8BA008EC8D7 /* AppDelegate.swift */,
+				53A58E0F2706F8BA008EC8D7 /* SceneDelegate.swift */,
 				53A58E162706F8BC008EC8D7 /* Assets.xcassets */,
 				53A58E182706F8BC008EC8D7 /* LaunchScreen.storyboard */,
 				53A58E1B2706F8BC008EC8D7 /* Info.plist */,
@@ -75,21 +85,20 @@
 			path = IbarakiUiniversityApp;
 			sourceTree = "<group>";
 		};
-		53A58E21270707E7008EC8D7 /* Controller */ = {
+		53A58E21270707E7008EC8D7 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				53A58E112706F8BA008EC8D7 /* MainController.swift */,
-				53A58E242707091E008EC8D7 /* DocumentsListViewController.swift */,
-				53A58E262707096D008EC8D7 /* PortalViewController.swift */,
-				53A58E2827070984008EC8D7 /* ManabaViewController.swift */,
-				53A58E2A2707099B008EC8D7 /* LabViewController.swift */,
+				5389600B270859C300198C54 /* SubmitDocumentsPresenter.swift */,
+				5389600F27085EF400198C54 /* LabToDoPresenter.swift */,
 			);
-			path = Controller;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		53A58E22270707F8008EC8D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53896009270859A700198C54 /* SubumitDocumentModel.swift */,
+				5389600D27085E2200198C54 /* LabToDoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,8 +106,11 @@
 		53A58E2327070802008EC8D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				53A58E0D2706F8BA008EC8D7 /* AppDelegate.swift */,
-				53A58E0F2706F8BA008EC8D7 /* SceneDelegate.swift */,
+				53A58E112706F8BA008EC8D7 /* MainController.swift */,
+				53A58E242707091E008EC8D7 /* DocumentsListViewController.swift */,
+				53A58E262707096D008EC8D7 /* PortalViewController.swift */,
+				53A58E2827070984008EC8D7 /* ManabaViewController.swift */,
+				53A58E2A2707099B008EC8D7 /* LabViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5389601027085EF400198C54 /* LabToDoPresenter.swift in Sources */,
+				5389600C270859C300198C54 /* SubmitDocumentsPresenter.swift in Sources */,
+				5389600E27085E2200198C54 /* LabToDoModel.swift in Sources */,
+				5389600A270859A700198C54 /* SubumitDocumentModel.swift in Sources */,
 				53A58E2927070984008EC8D7 /* ManabaViewController.swift in Sources */,
 				53A58E272707096D008EC8D7 /* PortalViewController.swift in Sources */,
 				53A58E122706F8BA008EC8D7 /* MainController.swift in Sources */,
