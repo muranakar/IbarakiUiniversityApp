@@ -163,7 +163,7 @@
         <!--提出物一覧-->
         <scene sceneID="Sne-ZW-tNC">
             <objects>
-                <viewController id="JdK-eT-5jv" customClass="DocumentsListViewController" customModule="IbarakiUiniversityApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DocumentListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JdK-eT-5jv" customClass="DocumentsListViewController" customModule="IbarakiUiniversityApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4iX-n9-j5r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,7 +190,7 @@
                                     <navigationItem title="提出物一覧" id="fSr-md-8DU">
                                         <barButtonItem key="rightBarButtonItem" title="追加" id="S8k-o1-NN3">
                                             <connections>
-                                                <segue destination="hm1-4m-WdA" kind="presentation" id="J3k-7A-kCm"/>
+                                                <action selector="AddDocumentButton:" destination="JdK-eT-5jv" id="aJH-wM-aK5"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -204,6 +204,7 @@
                     <connections>
                         <outlet property="tableView" destination="MKS-KA-s9L" id="GSI-ki-d1u"/>
                         <segue destination="wUU-uc-0pP" kind="presentation" modalPresentationStyle="fullScreen" id="4Nz-HC-R1B"/>
+                        <segue destination="hm1-4m-WdA" kind="presentation" modalPresentationStyle="fullScreen" id="FGA-wI-ryL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7F-11-c4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -237,20 +238,42 @@
             </objects>
             <point key="canvasLocation" x="2761" y="-32"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Document View Controller-->
         <scene sceneID="3Ul-jf-e3f">
             <objects>
-                <viewController id="hm1-4m-WdA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hm1-4m-WdA" customClass="AddDocumentViewController" customModule="IbarakiUiniversityApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qk7-Gd-65J">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30s-rY-o51">
+                                <rect key="frame" x="121" y="622" width="172" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="AddDocument:" destination="hm1-4m-WdA" eventType="touchUpInside" id="8CR-nP-aDy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6s-up-zER">
+                                <rect key="frame" x="121" y="153" width="172" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UgU-8F-4RT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mvG-tO-FZH"/>
+                    <connections>
+                        <outlet property="newDocument" destination="z6s-up-zER" id="ahY-sv-Wjc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLR-km-QmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2762" y="-702"/>
+            <point key="canvasLocation" x="2760.8695652173915" y="-702.45535714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gmm-K2-MZb">

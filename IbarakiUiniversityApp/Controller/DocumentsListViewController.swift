@@ -15,17 +15,42 @@ class DocumentsListViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UserDefaults.standard.setValue(["test"], forKey: "LabToDo")
         tableView.delegate = self
         tableView.dataSource = self
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewwill")
+        tableView.reloadData()
+    }
+    
+    //ここの実装いる？
+    func configreRefreshControl (){
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(handleRefreshControl), for: .valueChanged)
+    }
+    
+    @objc func handleRefreshControl() {
+        self.tableView.reloadData()
+        self.tableView.refreshControl?.endRefreshing()
+    }
+    
+    
+    @IBAction func AddDocumentButton(_ sender: Any) {
+        let addDocumentViewController = self.storyboard?.instantiateViewController(withIdentifier: "addVC") as! AddDocumentViewController
+        self.present(addDocumentViewController, animated: true, completion: nil)
+        
+    }
+    
 }
 
 extension DocumentsListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        DocumentItems = UserDefaults.standard.stringArray(forKey: "LabToDo")!
+        DocumentItems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
         
         return DocumentItems.count
     }
@@ -33,13 +58,15 @@ extension DocumentsListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        DocumentItems = UserDefaults.standard.stringArray(forKey: "LabToDo")!
+        DocumentItems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
         
         cell.textLabel!.text = DocumentItems[indexPath.row]
         return cell
     }
+    
+
 }
 
 extension DocumentsListViewController: UITableViewDelegate{
-    
+
 }

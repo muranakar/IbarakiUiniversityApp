@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		531A0177270C8FBB00F4F55B /* AddDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531A0176270C8FBB00F4F55B /* AddDocumentViewController.swift */; };
 		53A58E0E2706F8BA008EC8D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E0D2706F8BA008EC8D7 /* AppDelegate.swift */; };
 		53A58E102706F8BA008EC8D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E0F2706F8BA008EC8D7 /* SceneDelegate.swift */; };
 		53A58E122706F8BA008EC8D7 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E112706F8BA008EC8D7 /* MainController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		531A0176270C8FBB00F4F55B /* AddDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentViewController.swift; sourceTree = "<group>"; };
 		53A58E0A2706F8BA008EC8D7 /* IbarakiUiniversityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbarakiUiniversityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A58E0D2706F8BA008EC8D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53A58E0F2706F8BA008EC8D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				53A58E262707096D008EC8D7 /* PortalViewController.swift */,
 				53A58E2827070984008EC8D7 /* ManabaViewController.swift */,
 				53A58E2A2707099B008EC8D7 /* LabViewController.swift */,
+				531A0176270C8FBB00F4F55B /* AddDocumentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53A58E2927070984008EC8D7 /* ManabaViewController.swift in Sources */,
+				531A0177270C8FBB00F4F55B /* AddDocumentViewController.swift in Sources */,
 				53A58E272707096D008EC8D7 /* PortalViewController.swift in Sources */,
 				53A58E122706F8BA008EC8D7 /* MainController.swift in Sources */,
 				53A58E0E2706F8BA008EC8D7 /* AppDelegate.swift in Sources */,
