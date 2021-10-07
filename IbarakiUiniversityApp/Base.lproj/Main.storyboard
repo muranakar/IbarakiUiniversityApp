@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6g-Mq-z6i">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6g-Mq-z6i">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="研究室やることリスト" id="MC6-J7-iKa">
                                         <barButtonItem key="rightBarButtonItem" title="追加" id="qST-xl-lHv">
@@ -29,26 +28,36 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jdd-OP-dJf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jdd-OP-dJf">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54867941743195658" green="0.14829849163637179" blue="0.18947216525085198" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" rowHeight="66" id="4bv-Gd-VL1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ToDoCell" rowHeight="66" id="4bv-Gd-VL1">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4bv-Gd-VL1" id="9xo-L5-eiH">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qAM-cV-Fha"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y6g-Mq-z6i" firstAttribute="leading" secondItem="qAM-cV-Fha" secondAttribute="leading" id="6rm-x8-pWO"/>
+                            <constraint firstItem="jdd-OP-dJf" firstAttribute="trailing" secondItem="qAM-cV-Fha" secondAttribute="trailing" id="EhS-3H-hD7"/>
+                            <constraint firstItem="jdd-OP-dJf" firstAttribute="bottom" secondItem="qAM-cV-Fha" secondAttribute="bottom" id="Z3l-k9-cPc"/>
+                            <constraint firstItem="jdd-OP-dJf" firstAttribute="leading" secondItem="qAM-cV-Fha" secondAttribute="leading" id="atK-Er-qdz"/>
+                            <constraint firstItem="jdd-OP-dJf" firstAttribute="top" secondItem="Y6g-Mq-z6i" secondAttribute="bottom" id="bOw-8p-Rt7"/>
+                            <constraint firstItem="Y6g-Mq-z6i" firstAttribute="trailing" secondItem="qAM-cV-Fha" secondAttribute="trailing" id="r2q-KP-wnl"/>
+                            <constraint firstItem="Y6g-Mq-z6i" firstAttribute="top" secondItem="qAM-cV-Fha" secondAttribute="top" id="yc7-Yl-nqN"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="研究室ToDo" selectedImage="study" id="fvX-e6-xB5"/>
+                    <tabBarItem key="tabBarItem" title="研究室ToDo" image="study" selectedImage="study" id="fvX-e6-xB5"/>
                     <connections>
                         <outlet property="tableView" destination="jdd-OP-dJf" id="p1N-uE-6fu"/>
                         <segue destination="z9S-XZ-gh4" kind="presentation" modalPresentationStyle="fullScreen" id="SFn-4U-68F"/>
@@ -66,20 +75,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sh7-67-J93">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sh7-67-J93">
+                                <rect key="frame" x="0.0" y="82" width="414" height="731"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAU-P9-f1H">
+                                <rect key="frame" x="365" y="49" width="44" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="goforward" catalog="system"/>
+                                <connections>
+                                    <action selector="reloadButton:" destination="DI4-8C-8i6" eventType="touchUpInside" id="qXH-Ph-JJj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D1U-7v-r6a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sh7-67-J93" firstAttribute="top" secondItem="IAU-P9-f1H" secondAttribute="bottom" constant="2" id="84W-7R-iSa"/>
+                            <constraint firstItem="IAU-P9-f1H" firstAttribute="top" secondItem="D1U-7v-r6a" secondAttribute="top" constant="5" id="XAi-xH-k9T"/>
+                            <constraint firstItem="Sh7-67-J93" firstAttribute="trailing" secondItem="D1U-7v-r6a" secondAttribute="trailing" id="Zvf-br-M2e"/>
+                            <constraint firstItem="Sh7-67-J93" firstAttribute="bottom" secondItem="D1U-7v-r6a" secondAttribute="bottom" id="rS6-JZ-dtX"/>
+                            <constraint firstItem="Sh7-67-J93" firstAttribute="leading" secondItem="D1U-7v-r6a" secondAttribute="leading" id="uFT-aQ-ePE"/>
+                            <constraint firstItem="D1U-7v-r6a" firstAttribute="trailing" secondItem="IAU-P9-f1H" secondAttribute="trailing" constant="5" id="vlr-Tk-GcR"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="manaba" selectedImage="manaba" id="sYw-1Z-XUP"/>
+                    <tabBarItem key="tabBarItem" title="manaba" image="manaba" selectedImage="manaba" id="sYw-1Z-XUP"/>
                     <connections>
                         <outlet property="webview" destination="Sh7-67-J93" id="RC9-b2-OLp"/>
                     </connections>
@@ -96,15 +120,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Re-v2-PZI">
-                                <rect key="frame" x="105" y="202" width="204" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Re-v2-PZI">
+                                <rect key="frame" x="117" y="202" width="180" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="EDM-E4-rQQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="JKz-6j-Z8T"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGv-cO-LeZ">
-                                <rect key="frame" x="27" y="58" width="66" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGv-cO-LeZ">
+                                <rect key="frame" x="15" y="58" width="66" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="05g-7O-0Kv"/>
+                                    <constraint firstAttribute="height" constant="31" id="gdB-iu-on2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="戻る"/>
@@ -112,16 +144,17 @@
                                     <action selector="BackButton:" destination="DsT-Jx-Koi" eventType="touchUpInside" id="QTM-R5-fc4"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="やること" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8s-ag-rmK">
-                                <rect key="frame" x="159" y="136" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="やること" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8s-ag-rmK">
+                                <rect key="frame" x="156" y="136" width="102" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKp-Gh-rja">
-                                <rect key="frame" x="117" y="532" width="180" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKp-Gh-rja">
+                                <rect key="frame" x="117" y="534" width="180" height="60"/>
                                 <color key="backgroundColor" red="0.54867941740000004" green="0.1482984916" blue="0.1894721653" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="3sb-z6-SCf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="追加">
@@ -133,7 +166,17 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QTL-sz-AJb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jKp-Gh-rja" firstAttribute="centerX" secondItem="7hi-Ww-w6D" secondAttribute="centerX" id="3y4-TZ-kME"/>
+                            <constraint firstItem="jKp-Gh-rja" firstAttribute="top" secondItem="2Re-v2-PZI" secondAttribute="bottom" constant="292" id="Jb8-Pp-LI1"/>
+                            <constraint firstItem="e8s-ag-rmK" firstAttribute="top" secondItem="QTL-sz-AJb" secondAttribute="top" constant="92" id="JoB-sa-BUY"/>
+                            <constraint firstItem="2Re-v2-PZI" firstAttribute="centerX" secondItem="7hi-Ww-w6D" secondAttribute="centerX" id="MMK-8w-Ydy"/>
+                            <constraint firstItem="wGv-cO-LeZ" firstAttribute="leading" secondItem="QTL-sz-AJb" secondAttribute="leading" constant="15" id="PxW-xo-Xxo"/>
+                            <constraint firstItem="wGv-cO-LeZ" firstAttribute="top" secondItem="QTL-sz-AJb" secondAttribute="top" constant="14" id="Y98-dh-hh9"/>
+                            <constraint firstItem="2Re-v2-PZI" firstAttribute="top" secondItem="e8s-ag-rmK" secondAttribute="bottom" constant="36" id="i8k-fr-QEk"/>
+                            <constraint firstItem="e8s-ag-rmK" firstAttribute="centerX" secondItem="7hi-Ww-w6D" secondAttribute="centerX" id="vEh-LH-8zb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="AddButton" destination="jKp-Gh-rja" id="CpB-ym-eAL"/>
@@ -153,7 +196,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaB-Pb-y5a">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="82" width="414" height="731"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -161,11 +204,20 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obA-3q-BUX">
+                                <rect key="frame" x="365" y="49" width="44" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="goforward" catalog="system"/>
+                                <connections>
+                                    <action selector="reloadButton:" destination="shq-AB-qga" eventType="touchUpInside" id="fnk-io-lF5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M0C-b7-prH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="教務情報ポータル" selectedImage="logoIbarakiUniversity" id="bZ4-XW-YBL"/>
+                    <tabBarItem key="tabBarItem" title="教務情報ポータル" image="logoIbarakiUniversity" selectedImage="logoIbarakiUniversity" id="bZ4-XW-YBL"/>
                     <connections>
                         <outlet property="webview" destination="jaB-Pb-y5a" id="A5m-g3-BD1"/>
                     </connections>
@@ -209,24 +261,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MKS-KA-s9L">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MKS-KA-s9L">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.12968537182065784" green="0.32106912557524869" blue="0.12662153930390327" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="sXK-2w-FFy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="sXK-2w-FFy">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sXK-2w-FFy" id="iXj-ft-uKQ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemTealColor"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sCt-Bt-LMR">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCt-Bt-LMR">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="提出物一覧" id="fSr-md-8DU">
                                         <barButtonItem key="rightBarButtonItem" title="追加" id="S8k-o1-NN3">
@@ -240,8 +292,17 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l7d-Xr-V2U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MKS-KA-s9L" firstAttribute="trailing" secondItem="l7d-Xr-V2U" secondAttribute="trailing" id="AOG-LV-02M"/>
+                            <constraint firstItem="MKS-KA-s9L" firstAttribute="leading" secondItem="l7d-Xr-V2U" secondAttribute="leading" id="U5w-M0-jEo"/>
+                            <constraint firstItem="sCt-Bt-LMR" firstAttribute="trailing" secondItem="l7d-Xr-V2U" secondAttribute="trailing" id="UNr-F5-5i0"/>
+                            <constraint firstItem="MKS-KA-s9L" firstAttribute="top" secondItem="sCt-Bt-LMR" secondAttribute="bottom" id="Zx5-LC-Vo6"/>
+                            <constraint firstItem="sCt-Bt-LMR" firstAttribute="top" secondItem="l7d-Xr-V2U" secondAttribute="top" id="iIb-p0-LYv"/>
+                            <constraint firstItem="sCt-Bt-LMR" firstAttribute="leading" secondItem="l7d-Xr-V2U" secondAttribute="leading" id="oz9-Gf-Shf"/>
+                            <constraint firstItem="MKS-KA-s9L" firstAttribute="bottom" secondItem="l7d-Xr-V2U" secondAttribute="bottom" id="pbL-gU-nCG"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="提出物一覧" selectedImage="document" id="cMB-BS-hUb"/>
+                    <tabBarItem key="tabBarItem" title="提出物一覧" image="document" selectedImage="document" id="cMB-BS-hUb"/>
                     <connections>
                         <outlet property="tableView" destination="MKS-KA-s9L" id="GSI-ki-d1u"/>
                         <segue destination="wUU-uc-0pP" kind="presentation" modalPresentationStyle="fullScreen" id="4Nz-HC-R1B"/>
@@ -286,10 +347,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30s-rY-o51">
-                                <rect key="frame" x="121" y="606" width="180" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30s-rY-o51">
+                                <rect key="frame" x="117" y="607" width="180" height="60"/>
                                 <color key="backgroundColor" red="0.1296853718" green="0.3210691256" blue="0.1266215393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gh3-Qb-AcT"/>
+                                    <constraint firstAttribute="width" constant="180" id="jG4-b4-1nQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="追加">
@@ -299,9 +363,12 @@
                                     <action selector="AddDocument:" destination="hm1-4m-WdA" eventType="touchUpInside" id="8CR-nP-aDy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVx-OD-Je1">
-                                <rect key="frame" x="27" y="64" width="68" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVx-OD-Je1">
+                                <rect key="frame" x="15" y="64" width="68" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="GyG-lG-n6g"/>
+                                    <constraint firstAttribute="width" constant="68" id="q97-sU-9Tg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="戻る"/>
@@ -309,21 +376,35 @@
                                     <action selector="BackButton:" destination="hm1-4m-WdA" eventType="touchUpInside" id="x8P-PJ-YY0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="提出物名" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OpC-cS-WQe">
-                                <rect key="frame" x="159" y="136" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="提出物名" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OpC-cS-WQe">
+                                <rect key="frame" x="156" y="136" width="102" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6s-up-zER">
-                                <rect key="frame" x="121" y="191" width="172" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6s-up-zER">
+                                <rect key="frame" x="117" y="191" width="180" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="CdJ-TS-K3c"/>
+                                    <constraint firstAttribute="height" constant="40" id="oAM-Pu-zUa"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UgU-8F-4RT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SVx-OD-Je1" firstAttribute="leading" secondItem="UgU-8F-4RT" secondAttribute="leading" constant="15" id="1Qc-gg-ShF"/>
+                            <constraint firstItem="SVx-OD-Je1" firstAttribute="top" secondItem="UgU-8F-4RT" secondAttribute="top" constant="20" id="2BY-Xp-u5q"/>
+                            <constraint firstItem="OpC-cS-WQe" firstAttribute="top" secondItem="UgU-8F-4RT" secondAttribute="top" constant="92" id="C1A-ao-Ibo"/>
+                            <constraint firstItem="z6s-up-zER" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="Fei-AW-dTL"/>
+                            <constraint firstItem="30s-rY-o51" firstAttribute="top" secondItem="z6s-up-zER" secondAttribute="bottom" constant="376" id="KUU-E4-oIH"/>
+                            <constraint firstItem="30s-rY-o51" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="RbS-tm-2oT"/>
+                            <constraint firstItem="OpC-cS-WQe" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="rEk-aV-XOW"/>
+                            <constraint firstItem="z6s-up-zER" firstAttribute="top" secondItem="OpC-cS-WQe" secondAttribute="bottom" constant="25" id="zra-uM-Ggl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mvG-tO-FZH"/>
                     <connections>
@@ -342,7 +423,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dGX-OV-b4t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="JdK-eT-5jv" kind="relationship" relationship="viewControllers" id="gXn-kg-sNh"/>
@@ -358,11 +439,15 @@
     </scenes>
     <resources>
         <image name="document" width="25" height="25"/>
+        <image name="goforward" catalog="system" width="121" height="128"/>
         <image name="logoIbarakiUniversity" width="25" height="25"/>
         <image name="manaba" width="25" height="25"/>
         <image name="study" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

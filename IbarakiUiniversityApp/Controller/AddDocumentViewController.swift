@@ -20,12 +20,16 @@ class AddDocumentViewController: UIViewController {
         
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func AddDocument(_ sender: Any) {
         
         if newDocument.text?.isEmpty != true{
-            var items = UserDefaults.standard.array(forKey: "Documents")
+            var items = UserDefaults.standard.array(forKey: "SubmitDocuments")
             items?.append(newDocument.text!)
-            UserDefaults.standard.setValue(items, forKey: "Documents")
+            UserDefaults.standard.setValue(items, forKey: "SubmitDocuments")
             newDocument.text = ""
             dismiss(animated: true, completion: nil)
             

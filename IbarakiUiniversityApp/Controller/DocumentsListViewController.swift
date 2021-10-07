@@ -31,7 +31,7 @@ class DocumentsListViewController: UIViewController{
 extension DocumentsListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        DocumentItems = UserDefaults.standard.array(forKey: "Documents") as! [String]
+        DocumentItems = UserDefaults.standard.array(forKey: "SubmitDocuments") as! [String]
         if DocumentItems.isEmpty != true {
             return DocumentItems.count
         }else {
@@ -45,13 +45,20 @@ extension DocumentsListViewController: UITableViewDataSource{
         let Documentcell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         
-        DocumentItems = UserDefaults.standard.array(forKey: "Documents") as! [String]
+        DocumentItems = UserDefaults.standard.array(forKey: "SubmitDocuments") as! [String]
         
         if DocumentItems.isEmpty != true{
             Documentcell.textLabel!.text = DocumentItems[indexPath.row]
+            Documentcell.textLabel?.textColor = .black
+            Documentcell.textLabel?.backgroundColor = .white
+            
             return Documentcell
         }else {
             Documentcell.textLabel?.text = "予定されている提出物がありません"
+            Documentcell.textLabel?.textColor = .white
+            Documentcell.textLabel?.backgroundColor = .darkGray
+            
+            
             return Documentcell
         }
         
@@ -64,10 +71,15 @@ extension DocumentsListViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            DocumentItems = UserDefaults.standard.array(forKey: "Documents") as! [String]
-            DocumentItems.remove(at: indexPath.row)
-            UserDefaults.standard.setValue(DocumentItems, forKey: "Documents")
-            tableView.reloadData()
+            DocumentItems = UserDefaults.standard.array(forKey: "SubmitDocuments") as! [String]
+            if DocumentItems.isEmpty != true{
+                DocumentItems.remove(at: indexPath.row)
+                UserDefaults.standard.setValue(DocumentItems, forKey: "SubmitDocuments")
+                tableView.reloadData()
+            }else{
+                return
+            }
+
         }
     }
 
@@ -87,9 +99,9 @@ extension DocumentsListViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = .black
+        view.tintColor = .clear
     }
     
 }

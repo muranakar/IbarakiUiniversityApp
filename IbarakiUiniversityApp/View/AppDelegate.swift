@@ -19,13 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UNUserNotificationCenter.current().delegate = self
             }
         }
+        if UserDefaults.standard.array(forKey: "SubmitDocuments") == nil{
+            UserDefaults.standard.setValue([], forKey: "SubmitDocuments")
+        }
         
-//        let documents = UserDefaults.standard.array(forKey: "Documents") as! [String]
-//        let todo = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
-//        let number:Int = documents.count + todo.count
-//
-//        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
-//        application.applicationIconBadgeNumber = number
+        if UserDefaults.standard.array(forKey: "LabToDo") == nil{
+            UserDefaults.standard.setValue([], forKey: "LabToDo")
+        }
+        
+        
+        let documents = UserDefaults.standard.array(forKey: "SubmitDocuments") as! [String]
+        let todo = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
+        let number:Int = documents.count + todo.count
+
+        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
+        application.applicationIconBadgeNumber = number
         
         return true
     }

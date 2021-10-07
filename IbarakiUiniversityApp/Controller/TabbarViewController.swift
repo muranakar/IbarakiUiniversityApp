@@ -15,12 +15,18 @@ class TabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         self.selectedIndex = 0
+        //error回避
+        if UserDefaults.standard.array(forKey: "SubmitDocuments") == nil{
+            UserDefaults.standard.setValue([], forKey: "SubmitDocuments")
+        }
         
-        Documentitems = UserDefaults.standard.array(forKey: "Documents") as! [String]
+        if UserDefaults.standard.array(forKey: "LabToDo") == nil{
+            UserDefaults.standard.setValue([], forKey: "LabToDo")
+        }
+        Documentitems = UserDefaults.standard.array(forKey: "SubmitDocuments") as! [String]
         ToDoitems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
+        
         
         let Documenttab: UITabBarItem = self.tabBar.items![0]
         let ToDotab: UITabBarItem = self.tabBar.items![1]
@@ -39,7 +45,7 @@ class TabbarViewController: UITabBarController {
     }
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         
-        Documentitems = UserDefaults.standard.array(forKey: "Documents") as! [String]
+        Documentitems = UserDefaults.standard.array(forKey: "SubmitDocuments") as! [String]
         ToDoitems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
         
         let Documenttab: UITabBarItem = self.tabBar.items![0]

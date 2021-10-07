@@ -50,9 +50,13 @@ extension LabViewController: UITableViewDataSource{
         
         if ToDoItems.isEmpty != true{
             ToDocell.textLabel?.text = ToDoItems[indexPath.row]
+            ToDocell.textLabel?.textColor = .black
+            ToDocell.textLabel?.backgroundColor = .white
             return ToDocell
         }else {
             ToDocell.textLabel?.text = "現在タスクがありません"
+            ToDocell.textLabel?.textColor = .white
+            ToDocell.textLabel?.backgroundColor = .darkGray
             return ToDocell
         }
     }
@@ -72,9 +76,13 @@ extension LabViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             ToDoItems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
-            ToDoItems.remove(at: indexPath.row)
-            UserDefaults.standard.setValue(ToDoItems, forKey: "LabToDo")
-            tableView.reloadData()
+            if ToDoItems.isEmpty != true{
+                ToDoItems.remove(at: indexPath.row)
+                UserDefaults.standard.setValue(ToDoItems, forKey: "LabToDo")
+                tableView.reloadData()
+            }else{
+                return
+            }
         }
     }
 }
@@ -86,7 +94,7 @@ extension LabViewController: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = .black
+        view.tintColor = .clear
     
     }
     
