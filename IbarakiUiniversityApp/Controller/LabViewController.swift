@@ -16,8 +16,6 @@ class LabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UserDefaults.standard.setValue(["修理"], forKey: "LabToDo")
-        
         tableView.dataSource = self
         tableView.delegate = self
 
@@ -29,6 +27,8 @@ class LabViewController: UIViewController {
         tableView.reloadData()
     }
     
+    
+    
 }
 
 extension LabViewController: UITableViewDataSource{
@@ -36,21 +36,58 @@ extension LabViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         ToDoItems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
-        
-        return ToDoItems.count
+        if ToDoItems.isEmpty != true {
+            return ToDoItems.count
+        }else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
+        let ToDocell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
         ToDoItems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
         
-        cell.textLabel?.text = ToDoItems[indexPath.row]
-        
-        return cell
+        if ToDoItems.isEmpty != true{
+            ToDocell.textLabel?.text = ToDoItems[indexPath.row]
+            return ToDocell
+        }else {
+            ToDocell.textLabel?.text = "現在タスクがありません"
+            return ToDocell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            ToDoItems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
+            ToDoItems.remove(at: indexPath.row)
+            UserDefaults.standard.setValue(ToDoItems, forKey: "LabToDo")
+            tableView.reloadData()
+        }
     }
 }
 
 extension LabViewController: UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = .black
+    
+    }
     
 }

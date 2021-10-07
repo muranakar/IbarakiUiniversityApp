@@ -11,28 +11,34 @@ class AddToDoViewController: UIViewController {
 
     
     @IBOutlet weak var NewTextField: UITextField!
+    @IBOutlet weak var AddButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        AddButton.layer.cornerRadius = 20.0
+        
     }
     
 
     @IBAction func AddToDo(_ sender: Any) {
         
         if NewTextField.text?.isEmpty != true {
-            var todoitems = UserDefaults.standard.array(forKey: "LaboToDo")
+            var todoitems = UserDefaults.standard.array(forKey: "LabToDo")
             todoitems?.append(NewTextField.text!)
-            UserDefaults.standard.setValue(todoitems, forKey: "LaboToDo")
+            UserDefaults.standard.setValue(todoitems, forKey: "LabToDo")
             NewTextField.text = ""
             dismiss(animated: true, completion: nil)
         }else{
             return
         }
-        
-        
     }
+    
+    @IBAction func BackButton(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     
 }

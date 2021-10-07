@@ -8,12 +8,15 @@
 import UIKit
 
 class AddDocumentViewController: UIViewController {
+    
 
     @IBOutlet weak var newDocument: UITextField!
+    @IBOutlet weak var AddButon: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        AddButon.layer.cornerRadius = 20.0
         
     }
 
@@ -30,6 +33,11 @@ class AddDocumentViewController: UIViewController {
             return
         }
     }
+    
+    @IBAction func BackButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 

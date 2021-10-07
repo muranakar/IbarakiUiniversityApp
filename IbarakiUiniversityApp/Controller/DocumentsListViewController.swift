@@ -15,7 +15,7 @@ class DocumentsListViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.setValue(["証明書"], forKey: "Documents")
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -26,47 +26,70 @@ class DocumentsListViewController: UIViewController{
         print("viewwill")
         tableView.reloadData()
     }
-    
-    //ここの実装いる？
-    func configreRefreshControl (){
-        tableView.refreshControl = UIRefreshControl()
-        tableView.refreshControl?.addTarget(self, action: #selector(handleRefreshControl), for: .valueChanged)
-    }
-    
-    @objc func handleRefreshControl() {
-        self.tableView.reloadData()
-        self.tableView.refreshControl?.endRefreshing()
-    }
-    
-    
-    @IBAction func AddDocumentButton(_ sender: Any) {
-        let addDocumentViewController = self.storyboard?.instantiateViewController(withIdentifier: "addVC") as! AddDocumentViewController
-        self.present(addDocumentViewController, animated: true, completion: nil)
-        
-    }
-    
 }
 
 extension DocumentsListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        DocumentItems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
-        
-        return DocumentItems.count
+        DocumentItems = UserDefaults.standard.array(forKey: "Documents") as! [String]
+        if DocumentItems.isEmpty != true {
+            return DocumentItems.count
+        }else {
+            return 1
+        }
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        DocumentItems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
+        let Documentcell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.textLabel!.text = DocumentItems[indexPath.row]
-        return cell
+        
+        DocumentItems = UserDefaults.standard.array(forKey: "Documents") as! [String]
+        
+        if DocumentItems.isEmpty != true{
+            Documentcell.textLabel!.text = DocumentItems[indexPath.row]
+            return Documentcell
+        }else {
+            Documentcell.textLabel?.text = "予定されている提出物がありません"
+            return Documentcell
+        }
+        
+       
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            DocumentItems = UserDefaults.standard.array(forKey: "Documents") as! [String]
+            DocumentItems.remove(at: indexPath.row)
+            UserDefaults.standard.setValue(DocumentItems, forKey: "Documents")
+            tableView.reloadData()
+        }
+    }
 
 }
 
 extension DocumentsListViewController: UITableViewDelegate{
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = .black
+    }
+    
 }
