@@ -12,6 +12,7 @@ class AddDocumentViewController: UIViewController {
 
     @IBOutlet weak var newDocument: UITextField!
     @IBOutlet weak var AddButon: UIButton!
+    @IBOutlet weak var DatePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +30,14 @@ class AddDocumentViewController: UIViewController {
         
         if newDocument.text?.isEmpty != true{
             var items = UserDefaults.standard.array(forKey: "SubmitDocuments")
+            //var date = UserDefaults.standard.array(forKey: "SubmitDate")
+            print(DatePicker.date)
             items?.append(newDocument.text!)
+            //date?.append(DatePicker.date)
             UserDefaults.standard.setValue(items, forKey: "SubmitDocuments")
             newDocument.text = ""
             dismiss(animated: true, completion: nil)
+            
             
         }else{
             return
