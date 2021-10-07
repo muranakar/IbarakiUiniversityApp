@@ -15,7 +15,7 @@ class DocumentsListViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.setValue(["test"], forKey: "LabToDo")
+        UserDefaults.standard.setValue(["証明書"], forKey: "Documents")
         tableView.delegate = self
         tableView.dataSource = self
         

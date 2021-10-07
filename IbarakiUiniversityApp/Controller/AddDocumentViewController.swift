@@ -20,9 +20,9 @@ class AddDocumentViewController: UIViewController {
     @IBAction func AddDocument(_ sender: Any) {
         
         if newDocument.text?.isEmpty != true{
-            var items = UserDefaults.standard.array(forKey: "LabToDo")
+            var items = UserDefaults.standard.array(forKey: "Documents")
             items?.append(newDocument.text!)
-            UserDefaults.standard.setValue(items, forKey: "LabToDo")
+            UserDefaults.standard.setValue(items, forKey: "Documents")
             newDocument.text = ""
             dismiss(animated: true, completion: nil)
             

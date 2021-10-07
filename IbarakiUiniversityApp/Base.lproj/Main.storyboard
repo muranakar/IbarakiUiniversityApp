@@ -23,7 +23,7 @@
                                     <navigationItem title="研究室やることリスト" id="MC6-J7-iKa">
                                         <barButtonItem key="rightBarButtonItem" title="追加" id="qST-xl-lHv">
                                             <connections>
-                                                <segue destination="DsT-Jx-Koi" kind="presentation" id="wS5-pj-Hem"/>
+                                                <segue destination="DsT-Jx-Koi" kind="presentation" modalPresentationStyle="fullScreen" id="wS5-pj-Hem"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -34,7 +34,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="4bv-Gd-VL1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" rowHeight="66" id="4bv-Gd-VL1">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4bv-Gd-VL1" id="9xo-L5-eiH">
@@ -88,20 +88,40 @@
             </objects>
             <point key="canvasLocation" x="1715.9420289855075" y="1066.7410714285713"/>
         </scene>
-        <!--View Controller-->
+        <!--Add To Do View Controller-->
         <scene sceneID="UmA-r1-ple">
             <objects>
-                <viewController id="DsT-Jx-Koi" sceneMemberID="viewController">
+                <viewController id="DsT-Jx-Koi" customClass="AddToDoViewController" customModule="IbarakiUiniversityApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7hi-Ww-w6D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Re-v2-PZI">
+                                <rect key="frame" x="159" y="152" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKp-Gh-rja">
+                                <rect key="frame" x="181" y="537" width="53" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="追加"/>
+                                <connections>
+                                    <action selector="AddToDo:" destination="DsT-Jx-Koi" eventType="touchUpInside" id="XTj-H4-TUl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QTL-sz-AJb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="NewTextField" destination="2Re-v2-PZI" id="zDX-OK-iPj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fH-du-bFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2642" y="1351"/>
+            <point key="canvasLocation" x="2640.579710144928" y="1350.6696428571429"/>
         </scene>
         <!--教務情報ポータル-->
         <scene sceneID="dtC-oG-jlK">
@@ -191,6 +211,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="追加" id="S8k-o1-NN3">
                                             <connections>
                                                 <action selector="AddDocumentButton:" destination="JdK-eT-5jv" id="aJH-wM-aK5"/>
+                                                <segue destination="hm1-4m-WdA" kind="presentation" modalPresentationStyle="fullScreen" id="A38-5c-tEs"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -204,7 +225,6 @@
                     <connections>
                         <outlet property="tableView" destination="MKS-KA-s9L" id="GSI-ki-d1u"/>
                         <segue destination="wUU-uc-0pP" kind="presentation" modalPresentationStyle="fullScreen" id="4Nz-HC-R1B"/>
-                        <segue destination="hm1-4m-WdA" kind="presentation" modalPresentationStyle="fullScreen" id="FGA-wI-ryL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7F-11-c4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
