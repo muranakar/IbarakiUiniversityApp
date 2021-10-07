@@ -17,6 +17,7 @@ class AddToDoViewController: UIViewController {
         super.viewDidLoad()
 
         AddButton.layer.cornerRadius = 20.0
+        NewTextField.layer.borderWidth = 2.0
         
     }
     

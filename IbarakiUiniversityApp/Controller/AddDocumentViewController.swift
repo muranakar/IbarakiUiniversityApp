@@ -17,6 +17,7 @@ class AddDocumentViewController: UIViewController {
         super.viewDidLoad()
         
         AddButon.layer.cornerRadius = 20.0
+        newDocument.layer.borderWidth = 2.0
         
     }
 
