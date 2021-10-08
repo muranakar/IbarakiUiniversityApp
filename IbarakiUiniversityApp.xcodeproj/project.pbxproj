@@ -20,6 +20,8 @@
 		53A58E272707096D008EC8D7 /* PortalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E262707096D008EC8D7 /* PortalViewController.swift */; };
 		53A58E2927070984008EC8D7 /* ManabaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E2827070984008EC8D7 /* ManabaViewController.swift */; };
 		53A58E2B2707099B008EC8D7 /* LabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E2A2707099B008EC8D7 /* LabViewController.swift */; };
+		53E8EBEE27109D6000E2FB72 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8EBED27109D6000E2FB72 /* ToDoModel.swift */; };
+		53E8EBF027109D7200E2FB72 /* DocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8EBEF27109D7200E2FB72 /* DocumentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		53A58E262707096D008EC8D7 /* PortalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalViewController.swift; sourceTree = "<group>"; };
 		53A58E2827070984008EC8D7 /* ManabaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManabaViewController.swift; sourceTree = "<group>"; };
 		53A58E2A2707099B008EC8D7 /* LabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabViewController.swift; sourceTree = "<group>"; };
+		53E8EBED27109D6000E2FB72 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
+		53E8EBEF27109D7200E2FB72 /* DocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		53A58E22270707F8008EC8D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53E8EBED27109D6000E2FB72 /* ToDoModel.swift */,
+				53E8EBEF27109D7200E2FB72 /* DocumentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,12 +192,14 @@
 				53A58E2927070984008EC8D7 /* ManabaViewController.swift in Sources */,
 				531A0177270C8FBB00F4F55B /* AddDocumentViewController.swift in Sources */,
 				53A58E272707096D008EC8D7 /* PortalViewController.swift in Sources */,
+				53E8EBEE27109D6000E2FB72 /* ToDoModel.swift in Sources */,
 				53A58E122706F8BA008EC8D7 /* MainController.swift in Sources */,
 				532D06D1270ED17C0010ABC4 /* AddToDoViewController.swift in Sources */,
 				53A58E0E2706F8BA008EC8D7 /* AppDelegate.swift in Sources */,
 				53A58E102706F8BA008EC8D7 /* SceneDelegate.swift in Sources */,
 				53A58E252707091E008EC8D7 /* DocumentsListViewController.swift in Sources */,
 				53633A7E270EF392006C6802 /* TabbarViewController.swift in Sources */,
+				53E8EBF027109D7200E2FB72 /* DocumentModel.swift in Sources */,
 				53A58E2B2707099B008EC8D7 /* LabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
