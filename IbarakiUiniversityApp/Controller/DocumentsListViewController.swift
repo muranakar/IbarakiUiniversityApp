@@ -11,6 +11,7 @@ class DocumentsListViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
+    var documentmodel = DocumentModel()
     var DocumentItems = [String]()
     
     override func viewDidLoad() {
@@ -31,7 +32,8 @@ class DocumentsListViewController: UIViewController{
 extension DocumentsListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        DocumentItems = UserDefaults.standard.array(forKey: "SubmitDocuments") as! [String]
+        DocumentItems = documentmodel.readData()
+        
         if DocumentItems.isEmpty != true {
             return DocumentItems.count
         }else {
@@ -44,8 +46,7 @@ extension DocumentsListViewController: UITableViewDataSource{
         
         let Documentcell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        
-        DocumentItems = UserDefaults.standard.array(forKey: "SubmitDocuments") as! [String]
+        DocumentItems = documentmodel.readData()
         
         if DocumentItems.isEmpty != true{
             Documentcell.textLabel!.text = DocumentItems[indexPath.row]
@@ -71,10 +72,10 @@ extension DocumentsListViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            DocumentItems = UserDefaults.standard.array(forKey: "SubmitDocuments") as! [String]
+            DocumentItems = documentmodel.readData()
             if DocumentItems.isEmpty != true{
                 DocumentItems.remove(at: indexPath.row)
-                UserDefaults.standard.setValue(DocumentItems, forKey: "SubmitDocuments")
+                documentmodel.setData(SubmitDocument: DocumentItems)
                 tableView.reloadData()
             }else{
                 return

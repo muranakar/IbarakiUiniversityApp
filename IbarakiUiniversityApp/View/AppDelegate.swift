@@ -10,6 +10,13 @@ import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var documentmodel = DocumentModel()
+    var todomodel     = ToDoModel()
+    
+    var documents = [String]()
+    var todo      = [String]()
+    var number    = Int()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -27,10 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.setValue([], forKey: "LabToDo")
         }
         
-        
-        let documents = UserDefaults.standard.array(forKey: "SubmitDocuments") as! [String]
-        let todo = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
-        let number:Int = documents.count + todo.count
+        documents = todomodel.readData()
+        todo = todomodel.readData()
+        number = documents.count + todo.count
 
         application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
         application.applicationIconBadgeNumber = number
@@ -54,9 +60,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        let documents = UserDefaults.standard.array(forKey: "Documents") as! [String]
-        let todo = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
-        let number:Int = documents.count + todo.count
+        
+        documents = todomodel.readData()
+        todo = todomodel.readData()
+        number = documents.count + todo.count
         
         application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
         application.applicationIconBadgeNumber = number

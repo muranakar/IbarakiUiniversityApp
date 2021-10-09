@@ -9,6 +9,8 @@ import UIKit
 
 class LabViewController: UIViewController {
     
+    var todomodel = ToDoModel()
+    
     var  ToDoItems = [String]()
     
     @IBOutlet weak var tableView: UITableView!
@@ -26,16 +28,14 @@ class LabViewController: UIViewController {
         print("viewwill")
         tableView.reloadData()
     }
-    
-    
-    
 }
 
 extension LabViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        ToDoItems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
+        ToDoItems = todomodel.readData()
+        
         if ToDoItems.isEmpty != true {
             return ToDoItems.count
         }else {
@@ -46,7 +46,8 @@ extension LabViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let ToDocell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
-        ToDoItems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
+
+        ToDoItems = todomodel.readData()
         
         if ToDoItems.isEmpty != true{
             ToDocell.textLabel?.text = ToDoItems[indexPath.row]
@@ -75,10 +76,12 @@ extension LabViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            ToDoItems = UserDefaults.standard.array(forKey: "LabToDo") as! [String]
+            
+            ToDoItems = todomodel.readData()
+
             if ToDoItems.isEmpty != true{
                 ToDoItems.remove(at: indexPath.row)
-                UserDefaults.standard.setValue(ToDoItems, forKey: "LabToDo")
+                todomodel.setData(ToDo: ToDoItems)
                 tableView.reloadData()
             }else{
                 return
