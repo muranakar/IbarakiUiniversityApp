@@ -8,22 +8,19 @@
 import Foundation
 
 class DocumentModel{
-    
-    let DOCUMENT_KEY = "SubmitDocuments"
-    
-    init(){
-        
+
+    let documentKEY = "SubmitDocuments"
+
+    init() {
     }
-    
-    func setData(SubmitDocument:[String]){
-        UserDefaults.standard.setValue(SubmitDocument, forKey: DOCUMENT_KEY)
+
+    func setData(submitDocument: [String]) {
+        UserDefaults.standard.setValue(submitDocument, forKey: documentKEY)
     }
-    
-    func readData() -> [String]{
-        
-        let readDocument = UserDefaults.standard.array(forKey: DOCUMENT_KEY) as! [String]
-        
+
+    func readData() -> [String] {
+        let readDocument = UserDefaults.standard.array(forKey: documentKEY) as? [String] ?? [""]
+
         return readDocument
     }
-    
 }

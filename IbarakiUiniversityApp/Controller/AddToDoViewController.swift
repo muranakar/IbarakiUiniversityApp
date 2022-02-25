@@ -8,42 +8,33 @@
 import UIKit
 
 class AddToDoViewController: UIViewController {
+    @IBOutlet private weak var newTextField: UITextField!
+    @IBOutlet private weak var addButton: UIButton!
 
-    
-    @IBOutlet weak var NewTextField: UITextField!
-    @IBOutlet weak var AddButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        AddButton.layer.cornerRadius = 20.0
-        NewTextField.layer.borderWidth = 2.0
-        
+        addButton.layer.cornerRadius = 20.0
+        newTextField.layer.borderWidth = 2.0
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
 
-    @IBAction func AddToDo(_ sender: Any) {
-        
-        if NewTextField.text?.isEmpty != true {
+    @IBAction func addToDo(_ sender: Any) {
+        if newTextField.text?.isEmpty != true {
             var todoitems = UserDefaults.standard.array(forKey: "LabToDo")
-            todoitems?.append(NewTextField.text!)
+            todoitems?.append(newTextField.text!)
             UserDefaults.standard.setValue(todoitems, forKey: "LabToDo")
-            NewTextField.text = ""
+            newTextField.text = ""
             dismiss(animated: true, completion: nil)
-        }else{
+        } else {
             return
         }
     }
-    
-    @IBAction func BackButton(_ sender: Any) {
-        
+
+    @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
 }

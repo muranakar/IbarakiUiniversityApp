@@ -8,23 +8,19 @@
 import Foundation
 
 class ToDoModel{
-    
-    let TODO_KEY = "LabToDo"
-    
-    init(){
-        
+
+    let todoKEY = "LabToDo"
+
+    init() {
     }
-    
-    func setData(ToDo:[String]){
-        UserDefaults.standard.setValue(ToDo, forKey: TODO_KEY)
+
+    func setData(toDo:[String]) {
+        UserDefaults.standard.setValue(toDo, forKey: todoKEY)
     }
-    
-    func readData() -> [String]{
-        
-        let readToDo = UserDefaults.standard.array(forKey: TODO_KEY) as! [String]
-        
+
+    func readData() -> [String] {
+        let readToDo = UserDefaults.standard.array(forKey: todoKEY) as? [String] ?? [""]
+
         return readToDo
     }
-    
-    
 }
