@@ -12,8 +12,6 @@ class PortalViewController: UIViewController {
 
     @IBOutlet weak var webview: WKWebView!
     
-    var refreshControl:UIRefreshControl!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let url = URL(string: "https://idc.ibaraki.ac.jp/portal/"){

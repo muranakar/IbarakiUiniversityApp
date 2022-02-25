@@ -11,6 +11,7 @@ import WebKit
 class ManabaViewController: UIViewController {
 
     @IBOutlet weak var webview: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let url = URL(string: "https://manaba.ibaraki.ac.jp/"){
@@ -20,7 +21,6 @@ class ManabaViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     @IBAction func reloadButton(_ sender: Any) {
         webview.reload()
     }
