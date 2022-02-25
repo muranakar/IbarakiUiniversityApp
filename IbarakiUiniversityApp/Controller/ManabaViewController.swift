@@ -14,15 +14,12 @@ class ManabaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let url = URL(string: "https://manaba.ibaraki.ac.jp/"){
+        if let url = URL(string: "https://manaba.ibaraki.ac.jp/") {
             self.webview.load(URLRequest(url: url))
         }
-
-        // Do any additional setup after loading the view.
     }
-    
+
     @IBAction func reloadButton(_ sender: Any) {
         webview.reload()
     }
-   
 }

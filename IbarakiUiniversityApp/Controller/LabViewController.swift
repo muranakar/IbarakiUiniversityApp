@@ -66,7 +66,9 @@ extension LabViewController: UITableViewDataSource {
         return true
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             toDoItems = todomodel.readData()
 
@@ -81,7 +83,7 @@ extension LabViewController: UITableViewDataSource {
     }
 }
 
-extension LabViewController: UITableViewDelegate{
+extension LabViewController: UITableViewDelegate { 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
     }

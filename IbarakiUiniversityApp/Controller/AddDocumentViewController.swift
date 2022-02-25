@@ -11,13 +11,12 @@ class AddDocumentViewController: UIViewController {
     @IBOutlet weak var newDocument: UITextField!
     @IBOutlet weak var addButon: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         addButon.layer.cornerRadius = 20.0
         newDocument.layer.borderWidth = 2.0
-        
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

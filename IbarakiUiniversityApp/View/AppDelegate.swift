@@ -26,21 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UNUserNotificationCenter.current().delegate = self
             }
         }
-        if UserDefaults.standard.array(forKey: "SubmitDocuments") == nil{
+        if UserDefaults.standard.array(forKey: "SubmitDocuments") == nil {
             UserDefaults.standard.setValue([], forKey: "SubmitDocuments")
         }
-        
-        if UserDefaults.standard.array(forKey: "LabToDo") == nil{
+        if UserDefaults.standard.array(forKey: "LabToDo") == nil {
             UserDefaults.standard.setValue([], forKey: "LabToDo")
         }
-        
         documents = todomodel.readData()
         todo = todomodel.readData()
         number = documents.count + todo.count
 
         application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
         application.applicationIconBadgeNumber = number
-        
+
         return true
     }
 
@@ -68,13 +66,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
         application.applicationIconBadgeNumber = number
     }
-    
-
-
-
 }
 
-extension AppDelegate: UNUserNotificationCenterDelegate{
+extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(
         _ center: UNUserNotificationCenter,
         willPresent notification: UNNotification,
@@ -84,4 +78,3 @@ extension AppDelegate: UNUserNotificationCenterDelegate{
         completionHandler([ .badge, .sound, .alert ])
     }
 }
-
