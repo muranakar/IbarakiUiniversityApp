@@ -7,14 +7,14 @@
 
 import Foundation
 
-class ToDoModel{
+class ToDoModel {
 
     let todoKEY = "LabToDo"
 
     init() {
     }
 
-    func setData(toDo:[String]) {
+    func setData(toDo: [String]) {
         UserDefaults.standard.setValue(toDo, forKey: todoKEY)
     }
 

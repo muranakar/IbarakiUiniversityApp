@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DocumentModel{
+class DocumentModel {
 
     let documentKEY = "SubmitDocuments"
 
