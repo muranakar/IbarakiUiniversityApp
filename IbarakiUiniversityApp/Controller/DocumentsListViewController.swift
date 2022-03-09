@@ -58,7 +58,10 @@ extension DocumentsListViewController: UITableViewDataSource {
         return true
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath)
+    {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             documentItems = documentmodel.readData()
             if documentItems.isEmpty != true {

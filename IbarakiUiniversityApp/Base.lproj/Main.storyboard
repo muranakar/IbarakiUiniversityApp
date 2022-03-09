@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qqt-Ca-feS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qqt-Ca-feS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,7 +84,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAU-P9-f1H">
-                                <rect key="frame" x="365" y="49" width="44" height="31"/>
+                                <rect key="frame" x="364" y="49" width="45" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="goforward" catalog="system"/>
                                 <connections>
@@ -210,7 +210,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obA-3q-BUX">
-                                <rect key="frame" x="365" y="49" width="44" height="31"/>
+                                <rect key="frame" x="364" y="49" width="45" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="goforward" catalog="system"/>
                                 <connections>
@@ -355,22 +355,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30s-rY-o51">
-                                <rect key="frame" x="117" y="607" width="180" height="60"/>
-                                <color key="backgroundColor" red="0.1296853718" green="0.3210691256" blue="0.1266215393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="gh3-Qb-AcT"/>
-                                    <constraint firstAttribute="width" constant="180" id="jG4-b4-1nQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="追加">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="AddDocument:" destination="hm1-4m-WdA" eventType="touchUpInside" id="8CR-nP-aDy"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVx-OD-Je1">
                                 <rect key="frame" x="15" y="64" width="68" height="31"/>
                                 <constraints>
@@ -381,7 +365,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <action selector="BackButton:" destination="hm1-4m-WdA" eventType="touchUpInside" id="x8P-PJ-YY0"/>
+                                    <action selector="backButton:" destination="hm1-4m-WdA" eventType="touchUpInside" id="LGX-6E-87l"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6s-up-zER">
@@ -418,6 +402,22 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-nJ-msh">
                                 <rect key="frame" x="47" y="339" width="320" height="216"/>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30s-rY-o51">
+                                <rect key="frame" x="117" y="757" width="180" height="45"/>
+                                <color key="backgroundColor" red="0.1296853718" green="0.3210691256" blue="0.1266215393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Dyo-Lv-kvk"/>
+                                    <constraint firstAttribute="height" constant="45" id="Euh-3z-O6u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="追加">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDocument:" destination="hm1-4m-WdA" eventType="touchUpInside" id="Zms-VQ-f2S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UgU-8F-4RT"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -427,19 +427,19 @@
                             <constraint firstItem="SE5-7o-974" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="5Bw-ni-U7x"/>
                             <constraint firstItem="z6s-up-zER" firstAttribute="top" secondItem="JdW-Yy-Myj" secondAttribute="bottom" constant="39" id="DlY-Ws-qeL"/>
                             <constraint firstItem="z6s-up-zER" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="Fei-AW-dTL"/>
-                            <constraint firstItem="30s-rY-o51" firstAttribute="top" secondItem="z6s-up-zER" secondAttribute="bottom" constant="376" id="KUU-E4-oIH"/>
                             <constraint firstItem="bPa-nJ-msh" firstAttribute="top" secondItem="SE5-7o-974" secondAttribute="bottom" constant="8" symbolic="YES" id="LXv-bx-AHN"/>
                             <constraint firstItem="bPa-nJ-msh" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="MAF-60-fwe"/>
                             <constraint firstItem="JdW-Yy-Myj" firstAttribute="top" secondItem="UgU-8F-4RT" secondAttribute="top" constant="78" id="McM-w2-NoY"/>
-                            <constraint firstItem="30s-rY-o51" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="RbS-tm-2oT"/>
+                            <constraint firstItem="30s-rY-o51" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="MgI-sH-xGa"/>
+                            <constraint firstItem="UgU-8F-4RT" firstAttribute="bottom" secondItem="30s-rY-o51" secondAttribute="bottom" constant="60" id="RGP-88-ZNi"/>
                             <constraint firstItem="JdW-Yy-Myj" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="hR4-4Q-8nS"/>
                             <constraint firstItem="SE5-7o-974" firstAttribute="top" secondItem="z6s-up-zER" secondAttribute="bottom" constant="70" id="vud-UD-RWH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mvG-tO-FZH"/>
                     <connections>
-                        <outlet property="AddButon" destination="30s-rY-o51" id="OSE-be-Bm7"/>
-                        <outlet property="DatePicker" destination="bPa-nJ-msh" id="njS-uN-341"/>
+                        <outlet property="addButon" destination="30s-rY-o51" id="yfz-mq-vSB"/>
+                        <outlet property="datePicker" destination="bPa-nJ-msh" id="aN5-5n-G3s"/>
                         <outlet property="newDocument" destination="z6s-up-zER" id="ahY-sv-Wjc"/>
                     </connections>
                 </viewController>
