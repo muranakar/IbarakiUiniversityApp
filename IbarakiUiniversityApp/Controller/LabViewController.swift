@@ -74,7 +74,7 @@ extension LabViewController: UITableViewDataSource {
 
             if toDoItems.isEmpty != true {
                 toDoItems.remove(at: indexPath.row)
-                todomodel.setData(toDo: toDoItems)
+                todomodel.setData(data: toDoItems)
                 tableView.reloadData()
             } else {
                 return

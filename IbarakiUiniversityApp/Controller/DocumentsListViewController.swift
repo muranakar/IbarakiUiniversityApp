@@ -66,7 +66,7 @@ extension DocumentsListViewController: UITableViewDataSource {
             documentItems = documentmodel.readData()
             if documentItems.isEmpty != true {
                 documentItems.remove(at: indexPath.row)
-                documentmodel.setData(submitDocument: documentItems)
+                documentmodel.setData(data: documentItems)
                 tableView.reloadData()
             } else {
                 return
