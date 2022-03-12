@@ -7,19 +7,21 @@
 
 import Foundation
 
-class ToDoModel {
+protocol Model {
+    var key: String {set get}
+    func setData(data: [String])
+    func readData() -> [String]
+}
 
-    let todoKEY = "LabToDo"
+class ToDoModel: Model {
+    var key: String = "LabToDo"
 
-    init() {
-    }
-
-    func setData(toDo: [String]) {
-        UserDefaults.standard.setValue(toDo, forKey: todoKEY)
+    func setData(data: [String]) {
+        UserDefaults.standard.setValue(data, forKey: key)
     }
 
     func readData() -> [String] {
-        let readToDo = UserDefaults.standard.array(forKey: todoKEY) as? [String] ?? [""]
+        let readToDo = UserDefaults.standard.array(forKey: key) as? [String] ?? [""]
 
         return readToDo
     }

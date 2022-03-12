@@ -12,9 +12,17 @@ class AddDocumentViewController: UIViewController {
     @IBOutlet weak var addButon: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
 
-    struct submitDocument {
-        var documentName: String
-        var submitDate: Date
+    struct SubmitDocument {
+        var documentName: String?
+        var submitDate: Date?
+
+        init (documentName: String, submitDate: Date) {
+            guard documentName != "" else {
+                return
+            }
+            self.documentName = documentName
+            self.submitDate = submitDate
+        }
     }
 
     override func viewDidLoad() {
@@ -40,6 +48,7 @@ class AddDocumentViewController: UIViewController {
         if newDocument.text?.isEmpty != true {
             let document = newDocument.text ?? ""
             let date = datePicker.date
+
             var items = UserDefaults.standard.array(forKey: "SubmitDocuments") ?? [[]]
             items.append([document, date])
             UserDefaults.standard.setValue(items, forKey: "SubmitDocuments")

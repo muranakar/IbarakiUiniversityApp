@@ -427,11 +427,13 @@
                             <constraint firstItem="SE5-7o-974" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="5Bw-ni-U7x"/>
                             <constraint firstItem="z6s-up-zER" firstAttribute="top" secondItem="JdW-Yy-Myj" secondAttribute="bottom" constant="39" id="DlY-Ws-qeL"/>
                             <constraint firstItem="z6s-up-zER" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="Fei-AW-dTL"/>
+                            <constraint firstItem="bPa-nJ-msh" firstAttribute="leading" secondItem="UgU-8F-4RT" secondAttribute="leading" constant="47" id="Hup-fa-q7H"/>
                             <constraint firstItem="bPa-nJ-msh" firstAttribute="top" secondItem="SE5-7o-974" secondAttribute="bottom" constant="8" symbolic="YES" id="LXv-bx-AHN"/>
                             <constraint firstItem="bPa-nJ-msh" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="MAF-60-fwe"/>
                             <constraint firstItem="JdW-Yy-Myj" firstAttribute="top" secondItem="UgU-8F-4RT" secondAttribute="top" constant="78" id="McM-w2-NoY"/>
                             <constraint firstItem="30s-rY-o51" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="MgI-sH-xGa"/>
                             <constraint firstItem="UgU-8F-4RT" firstAttribute="bottom" secondItem="30s-rY-o51" secondAttribute="bottom" constant="60" id="RGP-88-ZNi"/>
+                            <constraint firstItem="UgU-8F-4RT" firstAttribute="trailing" secondItem="bPa-nJ-msh" secondAttribute="trailing" constant="47" id="UsE-Z3-2t2"/>
                             <constraint firstItem="JdW-Yy-Myj" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="hR4-4Q-8nS"/>
                             <constraint firstItem="SE5-7o-974" firstAttribute="top" secondItem="z6s-up-zER" secondAttribute="bottom" constant="70" id="vud-UD-RWH"/>
                         </constraints>
