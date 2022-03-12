@@ -142,6 +142,7 @@
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="BackButton:" destination="DsT-Jx-Koi" eventType="touchUpInside" id="QTM-R5-fc4"/>
+                                    <action selector="backButton:" destination="DsT-Jx-Koi" eventType="touchUpInside" id="mys-u7-ij2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKp-Gh-rja">
@@ -156,7 +157,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="AddToDo:" destination="DsT-Jx-Koi" eventType="touchUpInside" id="XTj-H4-TUl"/>
+                                    <action selector="addToDo:" destination="DsT-Jx-Koi" eventType="touchUpInside" id="QiK-4G-jID"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="やること" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4W-GH-fc8">
@@ -184,8 +185,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="AddButton" destination="jKp-Gh-rja" id="CpB-ym-eAL"/>
                         <outlet property="NewTextField" destination="2Re-v2-PZI" id="zDX-OK-iPj"/>
+                        <outlet property="addButton" destination="jKp-Gh-rja" id="g3s-9e-5FK"/>
+                        <outlet property="newTextField" destination="2Re-v2-PZI" id="2C3-2F-kKQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fH-du-bFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
