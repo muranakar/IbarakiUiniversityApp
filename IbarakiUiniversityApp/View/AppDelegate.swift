@@ -10,17 +10,17 @@ import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+
     var documentmodel = DocumentModel()
     var todomodel     = ToDoModel()
-    
+
     var documents = [String]()
     var todo      = [String]()
     var number    = Int()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, _) in
             if granted{
                 UNUserNotificationCenter.current().delegate = self

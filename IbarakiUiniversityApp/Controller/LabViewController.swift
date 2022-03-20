@@ -8,7 +8,7 @@
 import UIKit
 
 class LabViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
 
     var todomodel = ToDoModel()
     var  toDoItems = [String]()

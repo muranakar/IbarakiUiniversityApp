@@ -8,7 +8,7 @@
 import UIKit
 
 class DocumentsListViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
 
     var documentmodel = DocumentModel()
     var documentItems = [String]()

@@ -8,8 +8,8 @@
 import UIKit
 
 class TabbarViewController: UITabBarController {
-    var documentitems = [String]()
-    var toDoitems = [String]()
+    private var documentitems = [String]()
+    private var toDoitems = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

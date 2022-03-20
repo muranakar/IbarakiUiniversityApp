@@ -8,7 +8,7 @@
 import Foundation
 
 protocol Model {
-    var key: String {set get}
+    var key: String {get set}
     func setData(data: [String])
     func readData() -> [String]
 }

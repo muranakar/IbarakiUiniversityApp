@@ -8,9 +8,9 @@
 import UIKit
 
 class AddDocumentViewController: UIViewController {
-    @IBOutlet weak var newDocument: UITextField!
-    @IBOutlet weak var addButon: UIButton!
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet private weak var newDocument: UITextField!
+    @IBOutlet private weak var addButon: UIButton!
+    @IBOutlet private weak var datePicker: UIDatePicker!
 
     struct SubmitDocument {
         var documentName: String?

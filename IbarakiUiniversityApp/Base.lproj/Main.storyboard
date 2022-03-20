@@ -60,7 +60,6 @@
                     <tabBarItem key="tabBarItem" title="研究室ToDo" image="study" selectedImage="study" id="fvX-e6-xB5"/>
                     <connections>
                         <outlet property="tableView" destination="jdd-OP-dJf" id="p1N-uE-6fu"/>
-                        <segue destination="z9S-XZ-gh4" kind="presentation" modalPresentationStyle="fullScreen" id="SFn-4U-68F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMF-9E-hOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -192,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fH-du-bFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2640.579710144928" y="1350.6696428571429"/>
+            <point key="canvasLocation" x="2807" y="1779"/>
         </scene>
         <!--教務情報ポータル-->
         <scene sceneID="dtC-oG-jlK">
@@ -235,33 +234,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gj1-No-1pE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1715.9420289855075" y="326.78571428571428"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Cfb-T1-5Me">
-            <objects>
-                <viewController id="z9S-XZ-gh4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cDT-47-LZa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bet-FB-fpl">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="2Ti-R6-PvM">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="FNH-Ed-zsp"/>
-                                        <barButtonItem key="rightBarButtonItem" title="削除" id="AcB-fd-Qnb"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="09I-cd-4Fq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f9X-xu-Esd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2643" y="2071"/>
         </scene>
         <!--提出物一覧-->
         <scene sceneID="Sne-ZW-tNC">
@@ -315,39 +287,11 @@
                     <tabBarItem key="tabBarItem" title="提出物一覧" image="document" selectedImage="document" id="cMB-BS-hUb"/>
                     <connections>
                         <outlet property="tableView" destination="MKS-KA-s9L" id="GSI-ki-d1u"/>
-                        <segue destination="wUU-uc-0pP" kind="presentation" modalPresentationStyle="fullScreen" id="4Nz-HC-R1B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7F-11-c4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1715.9420289855075" y="-368.30357142857139"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9CC-ji-c7d">
-            <objects>
-                <viewController id="wUU-uc-0pP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aFT-Si-7HV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o8V-bT-fQR">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="AVC-xd-YXQ">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="ELm-1J-lIF"/>
-                                        <barButtonItem key="rightBarButtonItem" title="終了" id="8mm-oa-Z2o"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="WJj-At-EP8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oT1-BL-On2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2761" y="-32"/>
         </scene>
         <!--Add Document View Controller-->
         <scene sceneID="3Ul-jf-e3f">
@@ -449,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLR-km-QmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2760.8695652173915" y="-702.45535714285711"/>
+            <point key="canvasLocation" x="2806" y="-368"/>
         </scene>
         <!--Tabbar View Controller-->
         <scene sceneID="Gmm-K2-MZb">
