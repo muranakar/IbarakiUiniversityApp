@@ -82,8 +82,7 @@ extension LabViewController: UITableViewDataSource {
         }
     }
 }
-
-extension LabViewController: UITableViewDelegate { 
+extension LabViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
     }

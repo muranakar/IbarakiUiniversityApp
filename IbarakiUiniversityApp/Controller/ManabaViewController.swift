@@ -11,7 +11,7 @@ import WebKit
 class ManabaViewController: UIViewController {
 
     @IBOutlet private weak var webview: WKWebView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if let url = URL(string: "https://manaba.ibaraki.ac.jp/") {
