@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class AddDocumentViewController: UIViewController {
     @IBOutlet private weak var newDocument: UITextField!
