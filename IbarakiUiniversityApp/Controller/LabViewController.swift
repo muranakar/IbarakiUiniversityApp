@@ -43,12 +43,10 @@ extension LabViewController: UITableViewDataSource {
             toDoCell.textLabel?.backgroundColor = .darkGray
             return toDoCell
         }
-
         let toDoObject = toDoItems[indexPath.row]
         toDoCell.textLabel?.text = toDoObject.labTODO
         toDoCell.textLabel?.textColor = .black
         toDoCell.textLabel?.backgroundColor = .white
-
         return toDoCell
     }
 
@@ -68,7 +66,7 @@ extension LabViewController: UITableViewDataSource {
                    commit editingStyle: UITableViewCell.EditingStyle,
                    forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            if toDoItems.count == 0 {
+            if toDoItems != nil {
                 deleteLabToDo(at: indexPath.row)
                 tableView.reloadData()
             } else {
