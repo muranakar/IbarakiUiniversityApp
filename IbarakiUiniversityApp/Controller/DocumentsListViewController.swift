@@ -10,7 +10,7 @@ import UIKit
 class DocumentsListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
-    var documentmodel = DocumentModel()
+//    var documentmodel = DocumentModel()
     var documentItems = [String]()
 
     override func viewDidLoad() {

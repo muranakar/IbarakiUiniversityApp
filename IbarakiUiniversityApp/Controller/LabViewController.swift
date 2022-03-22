@@ -8,31 +8,9 @@
 import UIKit
 import RealmSwift
 
-struct LabToDoCount {
-
-    enum LabToDoType {
-        case non
-        case on
-    }
-
-    func countResult (type: LabToDoType, cell: UITableViewCell) {
-        switch type {
-        case .non:
-            cell.textLabel?.textColor = .black
-            cell.textLabel?.backgroundColor = .white
-        case .on:
-            cell.textLabel?.text = "現在タスクがありません"
-            cell.textLabel?.textColor = .white
-            cell.textLabel?.backgroundColor = .darkGray
-        }
-    }
-}
-
 class LabViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
-//    var todomodel = ToDoModel()
-//    var  toDoItems = [String]()
     var toDoItems: Results<ToDoModel>!
 
     override func viewDidLoad() {
@@ -50,21 +28,27 @@ class LabViewController: UIViewController {
 
 extension LabViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        toDoItems.count
+        if toDoItems == nil {
+            return 1
+        } else {
+            return toDoItems.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let toDoCell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
-        let toDoObject = toDoItems[indexPath.row]
-        if toDoItems.count == 0 {
+        if toDoItems == nil {
             toDoCell.textLabel?.text = "現在タスクがありません"
             toDoCell.textLabel?.textColor = .white
             toDoCell.textLabel?.backgroundColor = .darkGray
-        } else {
-            toDoCell.textLabel?.text = toDoObject.labTODO
-            toDoCell.textLabel?.textColor = .black
-            toDoCell.textLabel?.backgroundColor = .white
+            return toDoCell
         }
+
+        let toDoObject = toDoItems[indexPath.row]
+        toDoCell.textLabel?.text = toDoObject.labTODO
+        toDoCell.textLabel?.textColor = .black
+        toDoCell.textLabel?.backgroundColor = .white
+
         return toDoCell
     }
 

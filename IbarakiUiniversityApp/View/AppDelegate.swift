@@ -11,7 +11,7 @@ import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var documentmodel = DocumentModel()
+//    var documentmodel = DocumentModel()
     var todomodel     = ToDoModel()
 
     var documents = [String]()
