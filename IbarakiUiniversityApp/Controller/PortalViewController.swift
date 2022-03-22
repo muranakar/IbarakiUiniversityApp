@@ -19,7 +19,7 @@ class PortalViewController: UIViewController {
         }
     }
 
-    @IBAction func reloadButton(_ sender: Any) {
+    @IBAction private func reloadButton(_ sender: Any) {
         webview.reload()
     }
 }

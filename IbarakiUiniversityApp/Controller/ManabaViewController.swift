@@ -9,7 +9,6 @@ import UIKit
 import WebKit
 
 class ManabaViewController: UIViewController {
-
     @IBOutlet private weak var webview: WKWebView!
 
     override func viewDidLoad() {
@@ -19,7 +18,7 @@ class ManabaViewController: UIViewController {
         }
     }
 
-    @IBAction func reloadButton(_ sender: Any) {
+    @IBAction private func reloadButton(_ sender: Any) {
         webview.reload()
     }
 }

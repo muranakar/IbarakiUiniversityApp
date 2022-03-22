@@ -23,7 +23,7 @@ class AddToDoViewController: UIViewController {
         self.view.endEditing(true)
     }
 
-    @IBAction func addToDo(_ sender: Any) {
+    @IBAction private func addToDo(_ sender: Any) {
         do {
             let realm = try Realm()
             let labToDo = ToDoModel()
@@ -35,10 +35,9 @@ class AddToDoViewController: UIViewController {
         } catch {
             print("Error realm")
         }
-
     }
 
-    @IBAction func backButton(_ sender: Any) {
+    @IBAction private func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 }

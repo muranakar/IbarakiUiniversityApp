@@ -44,7 +44,7 @@ class AddDocumentViewController: UIViewController {
         self.view.endEditing(true)
     }
 
-    @IBAction func addDocument(_ sender: Any) {
+    @IBAction private func addDocument(_ sender: Any) {
         if newDocument.text?.isEmpty != true {
             let document = newDocument.text ?? ""
             let date = datePicker.date
@@ -59,7 +59,7 @@ class AddDocumentViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func backButton(_ sender: Any) {
+    @IBAction private func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 }
