@@ -7,6 +7,7 @@
 
 import UIKit
 import UserNotifications
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,22 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, _) in
-            if granted{
-                UNUserNotificationCenter.current().delegate = self
-            }
-        }
-        if UserDefaults.standard.array(forKey: "SubmitDocuments") == nil {
-            UserDefaults.standard.setValue([], forKey: "SubmitDocuments")
-        }
-        if UserDefaults.standard.array(forKey: "LabToDo") == nil {
-            UserDefaults.standard.setValue([], forKey: "LabToDo")
-        }
-
-        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
-        application.applicationIconBadgeNumber = number
-
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         return true
     }
 
