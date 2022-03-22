@@ -19,7 +19,14 @@ class LabViewController: UIViewController {
         tableView.dataSource = self
 //        tableView.delegate = self
 
+        do {
+            let realm = try Realm()
+            toDoItems = realm.objects(ToDoModel.self)
+        } catch {
+            print("Error")
+        }
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
