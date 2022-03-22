@@ -32,9 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserDefaults.standard.array(forKey: "LabToDo") == nil {
             UserDefaults.standard.setValue([], forKey: "LabToDo")
         }
-        documents = todomodel.readData()
-        todo = todomodel.readData()
-        number = documents.count + todo.count
 
         application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
         application.applicationIconBadgeNumber = number
@@ -58,10 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        
-        documents = todomodel.readData()
-        todo = todomodel.readData()
-        number = documents.count + todo.count
         
         application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
         application.applicationIconBadgeNumber = number
