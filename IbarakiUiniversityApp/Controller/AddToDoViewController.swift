@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddToDoViewController: UIViewController {
     @IBOutlet private weak var newTextField: UITextField!
@@ -23,15 +24,18 @@ class AddToDoViewController: UIViewController {
     }
 
     @IBAction func addToDo(_ sender: Any) {
-        if newTextField.text?.isEmpty != true {
-            var todoitems = UserDefaults.standard.array(forKey: "LabToDo")
-            todoitems?.append(newTextField.text!)
-            UserDefaults.standard.setValue(todoitems, forKey: "LabToDo")
-            newTextField.text = ""
-            dismiss(animated: true, completion: nil)
-        } else {
-            return
+        do {
+            let realm = try Realm()
+            let labToDo = ToDoModel()
+            labToDo.labTODO = newTextField.text
+            try realm.write {
+                realm.add(labToDo)
+            }
+            dismiss(animated: true)
+        } catch {
+            print("Error realm")
         }
+
     }
 
     @IBAction func backButton(_ sender: Any) {
