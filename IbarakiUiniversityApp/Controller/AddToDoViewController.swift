@@ -27,7 +27,7 @@ class AddToDoViewController: UIViewController {
         do {
             let realm = try Realm()
             let labToDo = ToDoModel()
-            labToDo.labTODO = newTextField.text
+            labToDo.labTODO = newTextField?.text
             try realm.write {
                 realm.add(labToDo)
             }
