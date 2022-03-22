@@ -6,23 +6,12 @@
 //
 
 import Foundation
+import RealmSwift
 
-protocol Model {
-    var key: String {get set}
-    func setData(data: [String])
-    func readData() -> [String]
-}
+class ToDoModel: Object {
 
-class ToDoModel: Model {
     var key: String = "LabToDo"
 
-    func setData(data: [String]) {
-        UserDefaults.standard.setValue(data, forKey: key)
-    }
+    @objc dynamic var labTODO: String? = nil
 
-    func readData() -> [String] {
-        let readToDo = UserDefaults.standard.array(forKey: key) as? [String] ?? [""]
-
-        return readToDo
-    }
 }

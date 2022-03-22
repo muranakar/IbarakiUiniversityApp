@@ -6,19 +6,12 @@
 //
 
 import Foundation
+import RealmSwift
 
-class DocumentModel: Model {
+class DocumentModel: Object {
+
     var key: String = "SubmitDocuments"
 
-    func setData(data: [String]) {
-        UserDefaults.standard.setValue(data, forKey: key)
-    }
-
-    func readData() -> [String] {
-        let readDocument = UserDefaults.standard.array(forKey: key) as? [String] ?? [""]
-        let test = UserDefaults.standard.array(forKey: key)!
-        print(test)
-        return readDocument
-    }
+    @objc dynamic var documentTODO: [[String]]? = nil
 
 }
