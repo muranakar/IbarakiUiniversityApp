@@ -12,13 +12,6 @@ import RealmSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-//    var documentmodel = DocumentModel()
-    var todomodel     = ToDoModel()
-
-    var documents = [String]()
-    var todo      = [String]()
-    var number    = Int()
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print(Realm.Configuration.defaultConfiguration.fileURL!)
@@ -38,22 +31,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
  
-    }
-    
-    func applicationWillTerminate(_ application: UIApplication) {
-        
-        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
-        application.applicationIconBadgeNumber = number
-    }
-}
-
-extension AppDelegate: UNUserNotificationCenterDelegate {
-    func userNotificationCenter(
-        _ center: UNUserNotificationCenter,
-        willPresent notification: UNNotification,
-        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
-    {
-        // アプリ起動時も通知を行う
-        completionHandler([ .badge, .sound, .alert ])
     }
 }
