@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DocumentsListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
-//    var documentmodel = DocumentModel()
-    var documentItems = [String]()
+    var documentItems: Results<DocumentModel>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,24 +22,21 @@ class DocumentsListViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewwill")
         tableView.reloadData()
     }
 }
 
-//extension DocumentsListViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        documentItems = documentmodel.readData()
-//        if documentItems.isEmpty != true {
-//            return documentItems.count
-//        } else {
-//            return 1
-//        }
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let documentcell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//
+extension DocumentsListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let documentcell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        documentcell.textLabel?.textColor = .white
+        documentcell.textLabel?.backgroundColor = .darkGray
+        return documentcell
+
 //        documentItems = documentmodel.readData()
 //        if documentItems.isEmpty != true {
 //            documentcell.textLabel!.text = documentItems[indexPath.row]
@@ -52,12 +49,12 @@ class DocumentsListViewController: UIViewController {
 //            documentcell.textLabel?.backgroundColor = .darkGray
 //            return documentcell
 //        }
-//    }
-//
-//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-//
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
 //    func tableView(_ tableView: UITableView,
 //                   commit editingStyle: UITableViewCell.EditingStyle,
 //                   forRowAt indexPath: IndexPath)
@@ -73,7 +70,7 @@ class DocumentsListViewController: UIViewController {
 //            }
 //        }
 //    }
-//}
+}
 
 extension DocumentsListViewController: UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
