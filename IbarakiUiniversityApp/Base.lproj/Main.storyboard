@@ -140,8 +140,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <action selector="BackButton:" destination="DsT-Jx-Koi" eventType="touchUpInside" id="QTM-R5-fc4"/>
-                                    <action selector="backButton:" destination="DsT-Jx-Koi" eventType="touchUpInside" id="mys-u7-ij2"/>
+                                    <action selector="backButton:" destination="DsT-Jx-Koi" eventType="touchUpInside" id="k9C-T5-dw8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKp-Gh-rja">
@@ -336,24 +335,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提出期限" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SE5-7o-974">
-                                <rect key="frame" x="157" y="301" width="100" height="30"/>
+                                <rect key="frame" x="157" y="256" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="HEU-D9-Oog"/>
-                                    <constraint firstAttribute="width" constant="100" id="RRe-9G-HUQ"/>
+                                    <constraint firstAttribute="width" constant="100" id="Cwz-EY-4Gu"/>
+                                    <constraint firstAttribute="height" constant="30" id="Nhg-i2-tSb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-nJ-msh">
-                                <rect key="frame" x="47" y="339" width="320" height="216"/>
+                                <rect key="frame" x="15" y="291" width="384" height="216"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30s-rY-o51">
-                                <rect key="frame" x="117" y="757" width="180" height="45"/>
+                                <rect key="frame" x="117" y="775" width="180" height="42"/>
                                 <color key="backgroundColor" red="0.1296853718" green="0.3210691256" blue="0.1266215393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="Dyo-Lv-kvk"/>
-                                    <constraint firstAttribute="height" constant="45" id="Euh-3z-O6u"/>
+                                    <constraint firstAttribute="width" constant="180" id="VD7-yM-nGV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -369,19 +367,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SVx-OD-Je1" firstAttribute="leading" secondItem="UgU-8F-4RT" secondAttribute="leading" constant="15" id="1Qc-gg-ShF"/>
+                            <constraint firstItem="SE5-7o-974" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="22Y-Rs-SoZ"/>
                             <constraint firstItem="SVx-OD-Je1" firstAttribute="top" secondItem="UgU-8F-4RT" secondAttribute="top" constant="20" id="2BY-Xp-u5q"/>
-                            <constraint firstItem="SE5-7o-974" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="5Bw-ni-U7x"/>
                             <constraint firstItem="z6s-up-zER" firstAttribute="top" secondItem="JdW-Yy-Myj" secondAttribute="bottom" constant="39" id="DlY-Ws-qeL"/>
                             <constraint firstItem="z6s-up-zER" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="Fei-AW-dTL"/>
-                            <constraint firstItem="bPa-nJ-msh" firstAttribute="leading" secondItem="UgU-8F-4RT" secondAttribute="leading" constant="47" id="Hup-fa-q7H"/>
-                            <constraint firstItem="bPa-nJ-msh" firstAttribute="top" secondItem="SE5-7o-974" secondAttribute="bottom" constant="8" symbolic="YES" id="LXv-bx-AHN"/>
-                            <constraint firstItem="bPa-nJ-msh" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="MAF-60-fwe"/>
+                            <constraint firstItem="30s-rY-o51" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="JBF-DF-91t"/>
                             <constraint firstItem="JdW-Yy-Myj" firstAttribute="top" secondItem="UgU-8F-4RT" secondAttribute="top" constant="78" id="McM-w2-NoY"/>
-                            <constraint firstItem="30s-rY-o51" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="MgI-sH-xGa"/>
-                            <constraint firstItem="UgU-8F-4RT" firstAttribute="bottom" secondItem="30s-rY-o51" secondAttribute="bottom" constant="60" id="RGP-88-ZNi"/>
-                            <constraint firstItem="UgU-8F-4RT" firstAttribute="trailing" secondItem="bPa-nJ-msh" secondAttribute="trailing" constant="47" id="UsE-Z3-2t2"/>
+                            <constraint firstItem="bPa-nJ-msh" firstAttribute="leading" secondItem="UgU-8F-4RT" secondAttribute="leading" constant="15" id="dC2-1K-5FB"/>
                             <constraint firstItem="JdW-Yy-Myj" firstAttribute="centerX" secondItem="qk7-Gd-65J" secondAttribute="centerX" id="hR4-4Q-8nS"/>
-                            <constraint firstItem="SE5-7o-974" firstAttribute="top" secondItem="z6s-up-zER" secondAttribute="bottom" constant="70" id="vud-UD-RWH"/>
+                            <constraint firstItem="UgU-8F-4RT" firstAttribute="bottom" secondItem="30s-rY-o51" secondAttribute="bottom" constant="45" id="k22-wu-OhA"/>
+                            <constraint firstItem="SE5-7o-974" firstAttribute="top" secondItem="z6s-up-zER" secondAttribute="bottom" constant="25" id="nww-tb-2Cp"/>
+                            <constraint firstItem="UgU-8F-4RT" firstAttribute="trailing" secondItem="bPa-nJ-msh" secondAttribute="trailing" constant="15" id="uev-kZ-DhU"/>
+                            <constraint firstItem="bPa-nJ-msh" firstAttribute="top" secondItem="SE5-7o-974" secondAttribute="bottom" constant="5" id="vCl-cw-O6W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mvG-tO-FZH"/>
@@ -393,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLR-km-QmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2806" y="-368"/>
+            <point key="canvasLocation" x="2805" y="-368.66197183098592"/>
         </scene>
         <!--Tabbar View Controller-->
         <scene sceneID="Gmm-K2-MZb">
