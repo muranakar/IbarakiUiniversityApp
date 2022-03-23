@@ -15,9 +15,16 @@ class DocumentsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(documentItems)
         tableView.delegate = self
 //        tableView.dataSource = self
+
+        do {
+            let realm = try Realm()
+            documentItems = realm.objects(DocumentModel.self)
+        } catch {
+            print("Error")
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -28,14 +35,26 @@ class DocumentsListViewController: UIViewController {
 
 extension DocumentsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        if documentItems == nil {
+            return 1
+        } else {
+            return documentItems.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let documentcell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        documentcell.textLabel?.textColor = .white
-        documentcell.textLabel?.backgroundColor = .darkGray
-        return documentcell
+        let documentCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        if documentItems == nil {
+            documentCell.textLabel?.text = "予定されている提出物がありません"
+            documentCell.textLabel?.textColor = .white
+            documentCell.textLabel?.backgroundColor = .darkGray
+            return documentCell
+        } else {
+//            documentCell.textLabel?.text = documentItems[indexPath.row]
+            documentCell.textLabel?.textColor = .black
+            documentCell.textLabel?.backgroundColor = .white
+            return documentCell
+        }
 
 //        documentItems = documentmodel.readData()
 //        if documentItems.isEmpty != true {
