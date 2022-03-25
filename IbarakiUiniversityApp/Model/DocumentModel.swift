@@ -13,6 +13,6 @@ class DocumentInfo: Object {
     @objc dynamic var documentDeadline: String = ""
 }
 
-class DocumentModel: Object {
+class DocumentList: Object {
     let documentToDos = List<DocumentInfo>()
 }
