@@ -13,6 +13,11 @@ class AddDocumentViewController: UIViewController {
     @IBOutlet private weak var addButon: UIButton!
     @IBOutlet private weak var datePicker: UIDatePicker!
 
+    let documentInfo = DocumentInfo()
+    var list: List<DocumentInfo>!
+
+    var picker: UIDatePicker = UIDatePicker()
+
     struct SubmitDocument {
         var documentName: String?
         var submitDate: Date?
