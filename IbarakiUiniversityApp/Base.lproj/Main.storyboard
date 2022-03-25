@@ -144,7 +144,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKp-Gh-rja">
-                                <rect key="frame" x="117" y="534" width="180" height="42"/>
+                                <rect key="frame" x="117" y="770" width="180" height="42"/>
                                 <color key="backgroundColor" red="0.54867941740000004" green="0.1482984916" blue="0.1894721653" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="3sb-z6-SCf"/>
@@ -173,8 +173,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jKp-Gh-rja" firstAttribute="centerX" secondItem="7hi-Ww-w6D" secondAttribute="centerX" id="3y4-TZ-kME"/>
-                            <constraint firstItem="jKp-Gh-rja" firstAttribute="top" secondItem="2Re-v2-PZI" secondAttribute="bottom" constant="292" id="Jb8-Pp-LI1"/>
                             <constraint firstItem="2Re-v2-PZI" firstAttribute="centerX" secondItem="7hi-Ww-w6D" secondAttribute="centerX" id="MMK-8w-Ydy"/>
+                            <constraint firstItem="QTL-sz-AJb" firstAttribute="bottom" secondItem="jKp-Gh-rja" secondAttribute="bottom" constant="50" id="O3c-4R-43Y"/>
                             <constraint firstItem="wGv-cO-LeZ" firstAttribute="leading" secondItem="QTL-sz-AJb" secondAttribute="leading" constant="15" id="PxW-xo-Xxo"/>
                             <constraint firstItem="wGv-cO-LeZ" firstAttribute="top" secondItem="QTL-sz-AJb" secondAttribute="top" constant="14" id="Y98-dh-hh9"/>
                             <constraint firstItem="2Re-v2-PZI" firstAttribute="top" secondItem="A4W-GH-fc8" secondAttribute="bottom" constant="34" id="mhM-dB-Ned"/>
