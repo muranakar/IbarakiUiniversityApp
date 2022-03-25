@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddDocumentViewController: UIViewController {
     @IBOutlet private weak var newDocument: UITextField!
@@ -27,17 +28,20 @@ class AddDocumentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         uiSetting()
 
-        addButon.layer.cornerRadius = 20.0
-        newDocument.layer.borderWidth = 2.0
+        do {
+            let realm = try Realm()
+            list = realm.objects(DocumentList.self).first?.documentToDos
+        } catch {
+            print("Error")
+        }
     }
 
     func uiSetting () {
         addButon.layer.cornerRadius = 5.0
         datePicker.preferredDatePickerStyle = .inline
-        datePicker.datePickerMode = .dateAndTime
+        datePicker.datePickerMode = .date
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -45,17 +49,27 @@ class AddDocumentViewController: UIViewController {
     }
 
     @IBAction private func addDocument(_ sender: Any) {
-        if newDocument.text?.isEmpty != true {
-            let document = newDocument.text ?? ""
-            let date = datePicker.date
+        do {
+            let realm = try Realm()
+            let documentInfo = DocumentInfo()
 
-            var items = UserDefaults.standard.array(forKey: "SubmitDocuments") ?? [[]]
-            items.append([document, date])
-            UserDefaults.standard.setValue(items, forKey: "SubmitDocuments")
-        } else {
-            return
+            let formatter = DateFormatter()
+            documentInfo.documentToDo = newDocument?.text ?? ""
+            formatter.dateFormat = "MM/dd"
+            print("\(formatter.string(from: picker.date))")
+//            documentInfo.documentDeadline = String(picker.date) ?? ""
+            try realm.write {
+                if list == nil {
+                    let documentList = DocumentList()
+                    documentList.documentToDos.append(documentInfo)
+                    realm.add(documentList)
+                }
+                realm.add(documentInfo)
+            }
+            dismiss(animated: true)
+        } catch {
+            print("Error realm")
         }
-        newDocument.text = ""
         dismiss(animated: true, completion: nil)
     }
 
