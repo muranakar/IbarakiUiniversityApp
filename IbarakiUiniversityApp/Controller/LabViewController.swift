@@ -15,7 +15,6 @@ class LabViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.dataSource = self
 //        tableView.delegate = self
 
@@ -44,6 +43,7 @@ extension LabViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let toDoCell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
+
         if toDoItems == nil {
             toDoCell.textLabel?.text = "現在タスクがありません"
             toDoCell.textLabel?.textColor = .white

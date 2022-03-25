@@ -11,17 +11,19 @@ import RealmSwift
 class DocumentsListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
-    var documentItems: Results<DocumentModel>!
+    var documentItems: Results<DocumentList>!
+    var list: List<DocumentInfo>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print(documentItems)
+        print(list)
         tableView.delegate = self
 //        tableView.dataSource = self
 
         do {
             let realm = try Realm()
-            documentItems = realm.objects(DocumentModel.self)
+            documentItems = realm.objects(DocumentList.self)
         } catch {
             print("Error")
         }
