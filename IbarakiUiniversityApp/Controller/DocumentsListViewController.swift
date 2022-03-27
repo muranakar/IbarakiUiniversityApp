@@ -45,10 +45,8 @@ extension DocumentsListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         guard let documentItems = documentItems
         else {
-
             let noneCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
             noneCell.textLabel?.text = "予定されている提出物がありません"
             noneCell.textLabel?.textColor = .white
@@ -59,7 +57,11 @@ extension DocumentsListViewController: UITableViewDataSource {
         guard let documentCell = tableView.dequeueReusableCell(
             withIdentifier: "documentCell",
             for: indexPath
-        ) as? DocumentTableViewCell else { return UITableViewCell() }
+        ) as? DocumentTableViewCell
+        else {
+            return UITableViewCell()
+            
+        }
 
         documentCell.documentNameLabel?.text = documentItems[indexPath.row].documentToDos[0].documentToDo
         documentCell.deadlineLabel.text = documentItems[indexPath.row].documentToDos[0].documentDeadline
