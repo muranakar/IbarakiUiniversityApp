@@ -19,6 +19,7 @@ class DocumentsListViewController: UIViewController {
         super.viewDidLoad()
 //        tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "DocumentTableViewCell", bundle: nil), forCellReuseIdentifier: "documentCell")
 
         do {
             let realm = try Realm()
@@ -88,7 +89,7 @@ extension DocumentsListViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 200
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
