@@ -60,7 +60,7 @@ extension DocumentsListViewController: UITableViewDataSource {
         ) as? DocumentTableViewCell
         else {
             return UITableViewCell()
-            
+
         }
 
         documentCell.documentNameLabel?.text = documentItems[indexPath.row].documentToDos[0].documentToDo
@@ -95,16 +95,8 @@ extension DocumentsListViewController: UITableViewDataSource {
 }
 
 extension DocumentsListViewController: UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 1
     }
 
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
