@@ -61,8 +61,7 @@ class AddDocumentViewController: UIViewController {
             let formatter = DateFormatter()
             documentInfo.documentToDo = newDocument?.text ?? ""
             formatter.dateFormat = "MM/dd"
-            print("\(formatter.string(from: picker.date))")
-//            documentInfo.documentDeadline = String(picker.date) ?? ""
+            documentInfo.documentDeadline = formatter.string(from: picker.date)
             try realm.write {
                 if list == nil {
                     let documentList = DocumentList()
