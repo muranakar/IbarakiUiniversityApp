@@ -33,6 +33,7 @@ class AddDocumentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         uiSetting()
 
         do {
@@ -57,11 +58,12 @@ class AddDocumentViewController: UIViewController {
         do {
             let realm = try Realm()
             let documentInfo = DocumentInfo()
-
             let formatter = DateFormatter()
+
             documentInfo.documentToDo = newDocument?.text ?? ""
             formatter.dateFormat = "MM/dd"
             documentInfo.documentDeadline = formatter.string(from: picker.date)
+
             try realm.write {
                 if list == nil {
                     let documentList = DocumentList()

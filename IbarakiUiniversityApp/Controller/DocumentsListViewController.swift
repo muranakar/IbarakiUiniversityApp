@@ -16,8 +16,6 @@ class DocumentsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(documentItems)
-        print(list)
         tableView.delegate = self
 //        tableView.dataSource = self
 
