@@ -10,7 +10,7 @@ import UIKit
 class DocumentTableViewCell: UITableViewCell {
     @IBOutlet weak var documentNameLabel: UILabel!
     @IBOutlet weak var deadlineLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,5 +21,4 @@ class DocumentTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

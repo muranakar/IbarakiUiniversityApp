@@ -60,7 +60,6 @@ extension DocumentsListViewController: UITableViewDataSource {
         ) as? DocumentTableViewCell
         else {
             return UITableViewCell()
-
         }
 
         documentCell.documentNameLabel?.text = documentItems[indexPath.row].documentToDos[0].documentToDo
