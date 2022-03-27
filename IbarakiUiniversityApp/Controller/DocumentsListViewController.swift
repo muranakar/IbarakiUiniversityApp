@@ -45,25 +45,29 @@ extension DocumentsListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if documentItems == nil {
+
+        guard let documentItems = documentItems
+        else {
+
             let noneCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
             noneCell.textLabel?.text = "予定されている提出物がありません"
             noneCell.textLabel?.textColor = .white
             noneCell.textLabel?.backgroundColor = .darkGray
             return noneCell
-        } else {
-            guard let documentCell = tableView.dequeueReusableCell(
-                withIdentifier: "documentCell",
-                for: indexPath
-            ) as? DocumentTableViewCell else { return UITableViewCell() }
-
-            documentCell.documentNameLabel?.text = documentItems[indexPath.row].documentToDos[0].documentToDo
-            documentCell.deadlineLabel.text = documentItems[indexPath.row].documentToDos[0].documentDeadline
-//            documentCell.textLabel?.textColor = .black
-//            documentCell.textLabel?.backgroundColor = .white
-            return documentCell
         }
+
+        guard let documentCell = tableView.dequeueReusableCell(
+            withIdentifier: "documentCell",
+            for: indexPath
+        ) as? DocumentTableViewCell else { return UITableViewCell() }
+
+        documentCell.documentNameLabel?.text = documentItems[indexPath.row].documentToDos[0].documentToDo
+        documentCell.deadlineLabel.text = documentItems[indexPath.row].documentToDos[0].documentDeadline
+        //            documentCell.textLabel?.textColor = .black
+        //            documentCell.textLabel?.backgroundColor = .white
+        return documentCell
     }
+
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
