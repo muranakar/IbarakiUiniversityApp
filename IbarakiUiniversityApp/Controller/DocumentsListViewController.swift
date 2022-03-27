@@ -51,45 +51,35 @@ extension DocumentsListViewController: UITableViewDataSource {
             documentCell.textLabel?.backgroundColor = .darkGray
             return documentCell
         } else {
-//            documentCell.textLabel?.text = documentItems[indexPath.row]
+            documentCell.textLabel?.text = documentItems[indexPath.row].documentToDos[0].documentToDo
             documentCell.textLabel?.textColor = .black
             documentCell.textLabel?.backgroundColor = .white
             return documentCell
         }
-
-//        documentItems = documentmodel.readData()
-//        if documentItems.isEmpty != true {
-//            documentcell.textLabel!.text = documentItems[indexPath.row]
-//            documentcell.textLabel?.textColor = .black
-//            documentcell.textLabel?.backgroundColor = .white
-//            return documentcell
-//        } else {
-//            documentcell.textLabel?.text = "予定されている提出物がありません"
-//            documentcell.textLabel?.textColor = .white
-//            documentcell.textLabel?.backgroundColor = .darkGray
-//            return documentcell
-//        }
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
 
-//    func tableView(_ tableView: UITableView,
-//                   commit editingStyle: UITableViewCell.EditingStyle,
-//                   forRowAt indexPath: IndexPath)
-//    {
-//        if editingStyle == UITableViewCell.EditingStyle.delete {
-//            documentItems = documentmodel.readData()
-//            if documentItems.isEmpty != true {
-//                documentItems.remove(at: indexPath.row)
-//                documentmodel.setData(data: documentItems)
-//                tableView.reloadData()
-//            } else {
-//                return
-//            }
-//        }
-//    }
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            if documentItems.isEmpty != true {
+                do {
+                    let realm = try Realm()
+                    documentItems = realm.objects(DocumentList.self)
+                    print("リストから要素を削除")
+                } catch {
+                    print("Error")
+                }
+                tableView.reloadData()
+            } else {
+                return
+            }
+        }
+    }
 }
 
 extension DocumentsListViewController: UITableViewDelegate {
