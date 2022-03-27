@@ -57,20 +57,16 @@ class AddDocumentViewController: UIViewController {
     @IBAction private func addDocument(_ sender: Any) {
         do {
             let realm = try Realm()
-            let documentInfo = DocumentInfo()
+//            let documentInfo = DocumentInfo()
             let formatter = DateFormatter()
 
             documentInfo.documentToDo = newDocument?.text ?? ""
             formatter.dateFormat = "MM/dd"
             documentInfo.documentDeadline = formatter.string(from: picker.date)
-
             try realm.write {
-                if list == nil {
-                    let documentList = DocumentList()
-                    documentList.documentToDos.append(documentInfo)
-                    realm.add(documentList)
-                }
-                realm.add(documentInfo)
+                let documentList = DocumentList()
+                documentList.documentToDos.append(documentInfo)
+                realm.add(documentList)
             }
             dismiss(animated: true)
         } catch {

@@ -13,6 +13,7 @@ class DocumentsListViewController: UIViewController {
 
     var documentItems: Results<DocumentList>!
     var list: List<DocumentInfo>!
+    var documentinfo = DocumentInfo()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,10 @@ class DocumentsListViewController: UIViewController {
         do {
             let realm = try Realm()
             documentItems = realm.objects(DocumentList.self)
+            list = realm.objects(DocumentList.self).first?.documentToDos
+            print("list")
+
+
         } catch {
             print("Error")
         }
