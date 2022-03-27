@@ -20,6 +20,8 @@
 		53A58E272707096D008EC8D7 /* PortalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E262707096D008EC8D7 /* PortalViewController.swift */; };
 		53A58E2927070984008EC8D7 /* ManabaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E2827070984008EC8D7 /* ManabaViewController.swift */; };
 		53A58E2B2707099B008EC8D7 /* LabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E2A2707099B008EC8D7 /* LabViewController.swift */; };
+		53C6629327F04B5200E82593 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6629127F04B5200E82593 /* DocumentTableViewCell.swift */; };
+		53C6629427F04B5200E82593 /* DocumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C6629227F04B5200E82593 /* DocumentTableViewCell.xib */; };
 		53E8EBEE27109D6000E2FB72 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8EBED27109D6000E2FB72 /* ToDoModel.swift */; };
 		53E8EBF027109D7200E2FB72 /* DocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8EBEF27109D7200E2FB72 /* DocumentModel.swift */; };
 		5D564DF0AF03A309A908FAEE /* Pods_IbarakiUiniversityApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF31067AD0E10D906FA1207 /* Pods_IbarakiUiniversityApp.framework */; };
@@ -42,6 +44,8 @@
 		53A58E262707096D008EC8D7 /* PortalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalViewController.swift; sourceTree = "<group>"; };
 		53A58E2827070984008EC8D7 /* ManabaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManabaViewController.swift; sourceTree = "<group>"; };
 		53A58E2A2707099B008EC8D7 /* LabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabViewController.swift; sourceTree = "<group>"; };
+		53C6629127F04B5200E82593 /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
+		53C6629227F04B5200E82593 /* DocumentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentTableViewCell.xib; sourceTree = "<group>"; };
 		53E8EBED27109D6000E2FB72 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 		53E8EBEF27109D7200E2FB72 /* DocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentModel.swift; sourceTree = "<group>"; };
 		88E042DD2DBC2ED028A21B82 /* Pods-IbarakiUiniversityApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbarakiUiniversityApp.debug.xcconfig"; path = "Target Support Files/Pods-IbarakiUiniversityApp/Pods-IbarakiUiniversityApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 			children = (
 				53A58E0D2706F8BA008EC8D7 /* AppDelegate.swift */,
 				53A58E0F2706F8BA008EC8D7 /* SceneDelegate.swift */,
+				53C6629127F04B5200E82593 /* DocumentTableViewCell.swift */,
+				53C6629227F04B5200E82593 /* DocumentTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C6629427F04B5200E82593 /* DocumentTableViewCell.xib in Resources */,
 				53A58E1A2706F8BC008EC8D7 /* LaunchScreen.storyboard in Resources */,
 				53A58E172706F8BC008EC8D7 /* Assets.xcassets in Resources */,
 				53A58E152706F8BA008EC8D7 /* Main.storyboard in Resources */,
@@ -284,6 +291,7 @@
 				53A58E0E2706F8BA008EC8D7 /* AppDelegate.swift in Sources */,
 				53A58E102706F8BA008EC8D7 /* SceneDelegate.swift in Sources */,
 				53A58E252707091E008EC8D7 /* DocumentsListViewController.swift in Sources */,
+				53C6629327F04B5200E82593 /* DocumentTableViewCell.swift in Sources */,
 				53633A7E270EF392006C6802 /* TabbarViewController.swift in Sources */,
 				53E8EBF027109D7200E2FB72 /* DocumentModel.swift in Sources */,
 				53A58E2B2707099B008EC8D7 /* LabViewController.swift in Sources */,
