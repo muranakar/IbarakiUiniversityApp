@@ -1,15 +1,14 @@
 //
-//  DocumentTableViewCell.swift
+//  LabToDoTableViewCell.swift
 //  IbarakiUiniversityApp
 //
-//  Created by HiroakiSaito on 2022/03/27.
+//  Created by HiroakiSaito on 2022/03/30.
 //
 
 import UIKit
 
-class DocumentTableViewCell: UITableViewCell {
-    @IBOutlet private(set) weak var documentNameLabel: UILabel!
-    @IBOutlet private(set) weak var deadlineLabel: UILabel!
+class LabToDoTableViewCell: UITableViewCell {
+    @IBOutlet private(set) weak var todoLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,4 +20,5 @@ class DocumentTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 }
