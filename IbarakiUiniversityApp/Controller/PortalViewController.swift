@@ -9,7 +9,6 @@ import UIKit
 import WebKit
 
 class PortalViewController: UIViewController {
-
     @IBOutlet private weak var webview: WKWebView!
 
     override func viewDidLoad() {

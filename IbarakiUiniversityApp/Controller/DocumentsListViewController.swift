@@ -81,7 +81,9 @@ extension DocumentsListViewController: UITableViewDataSource {
                 do {
                     let realm = try Realm()
                     documentItems = realm.objects(DocumentList.self)
-                    print("リストから要素を削除")
+                    try realm.write {
+                        realm.delete(documentItems[indexPath.row])
+                    }
                 } catch {
                     print("Error")
                 }
