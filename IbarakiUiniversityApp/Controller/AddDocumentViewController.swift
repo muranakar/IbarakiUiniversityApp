@@ -59,7 +59,7 @@ class AddDocumentViewController: UIViewController {
             let formatter = DateFormatter()
             documentInfo.documentToDo = newDocument?.text ?? ""
             formatter.dateFormat = "MM/dd"
-            documentInfo.documentDeadline = formatter.string(from: picker.date)
+            documentInfo.documentDeadline = formatter.string(from: datePicker.date)
 
             let realm = try Realm()
             try realm.write {
