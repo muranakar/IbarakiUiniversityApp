@@ -16,7 +16,8 @@ class LabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-//        tableView.delegate = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: "LabToDoTableViewCell", bundle: nil), forCellReuseIdentifier: "todoCell")
 
         do {
             let realm = try Realm()
