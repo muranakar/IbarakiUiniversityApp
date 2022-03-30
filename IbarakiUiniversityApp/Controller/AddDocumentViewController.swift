@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 
 class AddDocumentViewController: UIViewController {
-    @IBOutlet private weak var newDocument: UITextField!
+    @IBOutlet private weak var newDocumentTextField: UITextField!
     @IBOutlet private weak var addButon: UIButton!
     @IBOutlet private weak var datePicker: UIDatePicker!
 
@@ -55,26 +55,42 @@ class AddDocumentViewController: UIViewController {
     }
 
     @IBAction private func addDocument(_ sender: Any) {
-        do {
-            let formatter = DateFormatter()
-            documentInfo.documentToDo = newDocument?.text ?? ""
-            formatter.dateFormat = "MM/dd"
-            documentInfo.documentDeadline = formatter.string(from: datePicker.date)
+        if newDocumentTextField.text?.isEmpty != true {
+            do {
+                let formatter = DateFormatter()
+                documentInfo.documentToDo = newDocumentTextField.text ?? ""
+                formatter.dateFormat = "MM/dd"
+                documentInfo.documentDeadline = formatter.string(from: datePicker.date)
 
-            let realm = try Realm()
-            try realm.write {
-                let documentList = DocumentList()
-                documentList.documentToDos.append(documentInfo)
-                realm.add(documentList)
+                let realm = try Realm()
+                try realm.write {
+                    let documentList = DocumentList()
+                    documentList.documentToDos.append(documentInfo)
+                    realm.add(documentList)
+                }
+                dismiss(animated: true)
+            } catch {
+                print("Error realm")
             }
-            dismiss(animated: true)
-        } catch {
-            print("Error realm")
+            dismiss(animated: true, completion: nil)
+        } else {
+            presentAlert()
         }
-        dismiss(animated: true, completion: nil)
     }
 
     @IBAction private func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+
+    private func presentAlert() {
+        let alert = UIAlertController(
+            title: "注意",
+            message: "提出物名が空です\n提出物を追加するには記入してください。",
+            preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in self.viewDidLoad()})
+
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
 }
