@@ -385,7 +385,7 @@
                     <connections>
                         <outlet property="addButon" destination="30s-rY-o51" id="yfz-mq-vSB"/>
                         <outlet property="datePicker" destination="bPa-nJ-msh" id="aN5-5n-G3s"/>
-                        <outlet property="newDocument" destination="z6s-up-zER" id="ahY-sv-Wjc"/>
+                        <outlet property="newDocumentTextField" destination="z6s-up-zER" id="88K-G6-pHC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLR-km-QmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
