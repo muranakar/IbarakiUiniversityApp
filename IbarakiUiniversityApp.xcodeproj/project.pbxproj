@@ -74,6 +74,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		53066BC927FB179D004F8A03 /* DocumentTable */ = {
+			isa = PBXGroup;
+			children = (
+				53C6629127F04B5200E82593 /* DocumentTableViewCell.swift */,
+				53C6629227F04B5200E82593 /* DocumentTableViewCell.xib */,
+			);
+			path = DocumentTable;
+			sourceTree = "<group>";
+		};
+		53066BCA27FB17BE004F8A03 /* LabToDoTable */ = {
+			isa = PBXGroup;
+			children = (
+				5309CBC327F467060072ED57 /* LabToDoTableViewCell.swift */,
+				5309CBC427F467060072ED57 /* LabToDoTableViewCell.xib */,
+			);
+			path = LabToDoTable;
+			sourceTree = "<group>";
+		};
+		53066BCB27FB17E2004F8A03 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				53A58E242707091E008EC8D7 /* DocumentsListViewController.swift */,
+				531A0176270C8FBB00F4F55B /* AddDocumentViewController.swift */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		53066BCC27FB17FA004F8A03 /* LabToDo */ = {
+			isa = PBXGroup;
+			children = (
+				53A58E2A2707099B008EC8D7 /* LabViewController.swift */,
+				532D06D0270ED17C0010ABC4 /* AddToDoViewController.swift */,
+			);
+			path = LabToDo;
+			sourceTree = "<group>";
+		};
 		53A58E012706F8BA008EC8D7 = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +145,10 @@
 		53A58E21270707E7008EC8D7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				53A58E242707091E008EC8D7 /* DocumentsListViewController.swift */,
+				53066BCC27FB17FA004F8A03 /* LabToDo */,
+				53066BCB27FB17E2004F8A03 /* Document */,
 				53A58E262707096D008EC8D7 /* PortalViewController.swift */,
 				53A58E2827070984008EC8D7 /* ManabaViewController.swift */,
-				53A58E2A2707099B008EC8D7 /* LabViewController.swift */,
-				531A0176270C8FBB00F4F55B /* AddDocumentViewController.swift */,
-				532D06D0270ED17C0010ABC4 /* AddToDoViewController.swift */,
 				53633A7D270EF392006C6802 /* TabbarViewController.swift */,
 			);
 			path = Controller;
@@ -132,12 +166,10 @@
 		53A58E2327070802008EC8D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53066BCA27FB17BE004F8A03 /* LabToDoTable */,
+				53066BC927FB179D004F8A03 /* DocumentTable */,
 				53A58E0D2706F8BA008EC8D7 /* AppDelegate.swift */,
 				53A58E0F2706F8BA008EC8D7 /* SceneDelegate.swift */,
-				53C6629127F04B5200E82593 /* DocumentTableViewCell.swift */,
-				53C6629227F04B5200E82593 /* DocumentTableViewCell.xib */,
-				5309CBC327F467060072ED57 /* LabToDoTableViewCell.swift */,
-				5309CBC427F467060072ED57 /* LabToDoTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
