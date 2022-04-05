@@ -35,7 +35,7 @@ class LabViewController: UIViewController {
 
 extension LabViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if toDoItems == nil {
+        if toDoItems.isEmpty {
             return 1
         } else {
             return toDoItems.count
@@ -43,13 +43,21 @@ extension LabViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let toDoCell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
-
-        if toDoItems == nil {
-            toDoCell.textLabel?.text = "現在タスクがありません"
-            toDoCell.textLabel?.textColor = .white
-            toDoCell.textLabel?.backgroundColor = .darkGray
-            return toDoCell
+        guard toDoItems.count != 0
+        else {
+            let noneCell = tableView.dequeueReusableCell(withIdentifier: "todononeCell", for: indexPath)
+            noneCell.textLabel?.text = "現在タスクがありません"
+            noneCell.textLabel?.textAlignment = .center
+            noneCell.textLabel?.textColor = .white
+            noneCell.textLabel?.backgroundColor = .darkGray
+            return noneCell
+        }
+        guard let toDoCell = tableView.dequeueReusableCell(
+            withIdentifier: "todoCell",
+            for: indexPath
+        ) as? LabToDoTableViewCell
+        else {
+            return UITableViewCell()
         }
         let toDoObject = toDoItems[indexPath.row]
         toDoCell.textLabel?.text = toDoObject.labTODO
