@@ -37,7 +37,7 @@ class DocumentsListViewController: UIViewController {
 
 extension DocumentsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if documentItems == nil {
+        if documentItems.isEmpty {
             return 1
         } else {
             return documentItems.count
@@ -45,7 +45,7 @@ extension DocumentsListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let documentItems = documentItems
+        guard documentItems.count != 0
         else {
             let noneCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
             noneCell.textLabel?.text = "予定されている提出物がありません"
@@ -61,7 +61,6 @@ extension DocumentsListViewController: UITableViewDataSource {
         else {
             return UITableViewCell()
         }
-
         documentCell.documentNameLabel?.text = documentItems[indexPath.row].documentToDos[0].documentToDo
         documentCell.deadlineLabel.text = documentItems[indexPath.row].documentToDos[0].documentDeadline
         //            documentCell.textLabel?.textColor = .black
