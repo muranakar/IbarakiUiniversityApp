@@ -9,23 +9,16 @@ import UIKit
 import WebKit
 
 class PortalViewController: UIViewController {
+    @IBOutlet private weak var webview: WKWebView!
 
-    @IBOutlet weak var webview: WKWebView!
-    
-    var refreshControl:UIRefreshControl!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let url = URL(string: "https://idc.ibaraki.ac.jp/portal/"){
+        if let url = URL(string: "https://idc.ibaraki.ac.jp/portal/") {
             self.webview.load(URLRequest(url: url))
         }
-        
     }
-    
-    @IBAction func reloadButton(_ sender: Any) {
-        
+
+    @IBAction private func reloadButton(_ sender: Any) {
         webview.reload()
     }
-    
-
 }

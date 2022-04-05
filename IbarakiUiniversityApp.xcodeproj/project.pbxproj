@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5309CBC527F467060072ED57 /* LabToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5309CBC327F467060072ED57 /* LabToDoTableViewCell.swift */; };
+		5309CBC627F467060072ED57 /* LabToDoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5309CBC427F467060072ED57 /* LabToDoTableViewCell.xib */; };
 		531A0177270C8FBB00F4F55B /* AddDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531A0176270C8FBB00F4F55B /* AddDocumentViewController.swift */; };
 		532D06D1270ED17C0010ABC4 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D06D0270ED17C0010ABC4 /* AddToDoViewController.swift */; };
 		53633A7E270EF392006C6802 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53633A7D270EF392006C6802 /* TabbarViewController.swift */; };
 		53A58E0E2706F8BA008EC8D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E0D2706F8BA008EC8D7 /* AppDelegate.swift */; };
 		53A58E102706F8BA008EC8D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E0F2706F8BA008EC8D7 /* SceneDelegate.swift */; };
-		53A58E122706F8BA008EC8D7 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E112706F8BA008EC8D7 /* MainController.swift */; };
 		53A58E152706F8BA008EC8D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A58E132706F8BA008EC8D7 /* Main.storyboard */; };
 		53A58E172706F8BC008EC8D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A58E162706F8BC008EC8D7 /* Assets.xcassets */; };
 		53A58E1A2706F8BC008EC8D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A58E182706F8BC008EC8D7 /* LaunchScreen.storyboard */; };
@@ -20,16 +21,23 @@
 		53A58E272707096D008EC8D7 /* PortalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E262707096D008EC8D7 /* PortalViewController.swift */; };
 		53A58E2927070984008EC8D7 /* ManabaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E2827070984008EC8D7 /* ManabaViewController.swift */; };
 		53A58E2B2707099B008EC8D7 /* LabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A58E2A2707099B008EC8D7 /* LabViewController.swift */; };
+		53C6629327F04B5200E82593 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6629127F04B5200E82593 /* DocumentTableViewCell.swift */; };
+		53C6629427F04B5200E82593 /* DocumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C6629227F04B5200E82593 /* DocumentTableViewCell.xib */; };
+		53E8EBEE27109D6000E2FB72 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8EBED27109D6000E2FB72 /* ToDoModel.swift */; };
+		53E8EBF027109D7200E2FB72 /* DocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8EBEF27109D7200E2FB72 /* DocumentModel.swift */; };
+		5D564DF0AF03A309A908FAEE /* Pods_IbarakiUiniversityApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF31067AD0E10D906FA1207 /* Pods_IbarakiUiniversityApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CF31067AD0E10D906FA1207 /* Pods_IbarakiUiniversityApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IbarakiUiniversityApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5309CBC327F467060072ED57 /* LabToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabToDoTableViewCell.swift; sourceTree = "<group>"; };
+		5309CBC427F467060072ED57 /* LabToDoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabToDoTableViewCell.xib; sourceTree = "<group>"; };
 		531A0176270C8FBB00F4F55B /* AddDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentViewController.swift; sourceTree = "<group>"; };
 		532D06D0270ED17C0010ABC4 /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
 		53633A7D270EF392006C6802 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		53A58E0A2706F8BA008EC8D7 /* IbarakiUiniversityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbarakiUiniversityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A58E0D2706F8BA008EC8D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53A58E0F2706F8BA008EC8D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		53A58E112706F8BA008EC8D7 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		53A58E142706F8BA008EC8D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53A58E162706F8BC008EC8D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53A58E192706F8BC008EC8D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +46,12 @@
 		53A58E262707096D008EC8D7 /* PortalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalViewController.swift; sourceTree = "<group>"; };
 		53A58E2827070984008EC8D7 /* ManabaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManabaViewController.swift; sourceTree = "<group>"; };
 		53A58E2A2707099B008EC8D7 /* LabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabViewController.swift; sourceTree = "<group>"; };
+		53C6629127F04B5200E82593 /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
+		53C6629227F04B5200E82593 /* DocumentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentTableViewCell.xib; sourceTree = "<group>"; };
+		53E8EBED27109D6000E2FB72 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
+		53E8EBEF27109D7200E2FB72 /* DocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentModel.swift; sourceTree = "<group>"; };
+		88E042DD2DBC2ED028A21B82 /* Pods-IbarakiUiniversityApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbarakiUiniversityApp.debug.xcconfig"; path = "Target Support Files/Pods-IbarakiUiniversityApp/Pods-IbarakiUiniversityApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D16D301A054CBEDAFAF696CC /* Pods-IbarakiUiniversityApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbarakiUiniversityApp.release.xcconfig"; path = "Target Support Files/Pods-IbarakiUiniversityApp/Pods-IbarakiUiniversityApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +59,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D564DF0AF03A309A908FAEE /* Pods_IbarakiUiniversityApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28FFFED6D00F6AB67182AE55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CF31067AD0E10D906FA1207 /* Pods_IbarakiUiniversityApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53066BC927FB179D004F8A03 /* DocumentTable */ = {
+			isa = PBXGroup;
+			children = (
+				53C6629127F04B5200E82593 /* DocumentTableViewCell.swift */,
+				53C6629227F04B5200E82593 /* DocumentTableViewCell.xib */,
+			);
+			path = DocumentTable;
+			sourceTree = "<group>";
+		};
+		53066BCA27FB17BE004F8A03 /* LabToDoTable */ = {
+			isa = PBXGroup;
+			children = (
+				5309CBC327F467060072ED57 /* LabToDoTableViewCell.swift */,
+				5309CBC427F467060072ED57 /* LabToDoTableViewCell.xib */,
+			);
+			path = LabToDoTable;
+			sourceTree = "<group>";
+		};
+		53066BCB27FB17E2004F8A03 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				53A58E242707091E008EC8D7 /* DocumentsListViewController.swift */,
+				531A0176270C8FBB00F4F55B /* AddDocumentViewController.swift */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		53066BCC27FB17FA004F8A03 /* LabToDo */ = {
+			isa = PBXGroup;
+			children = (
+				53A58E2A2707099B008EC8D7 /* LabViewController.swift */,
+				532D06D0270ED17C0010ABC4 /* AddToDoViewController.swift */,
+			);
+			path = LabToDo;
+			sourceTree = "<group>";
+		};
 		53A58E012706F8BA008EC8D7 = {
 			isa = PBXGroup;
 			children = (
 				53A58E0C2706F8BA008EC8D7 /* IbarakiUiniversityApp */,
 				53A58E0B2706F8BA008EC8D7 /* Products */,
+				93A94E09C52777FDEF6622C7 /* Pods */,
+				28FFFED6D00F6AB67182AE55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,13 +145,10 @@
 		53A58E21270707E7008EC8D7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				53A58E112706F8BA008EC8D7 /* MainController.swift */,
-				53A58E242707091E008EC8D7 /* DocumentsListViewController.swift */,
+				53066BCC27FB17FA004F8A03 /* LabToDo */,
+				53066BCB27FB17E2004F8A03 /* Document */,
 				53A58E262707096D008EC8D7 /* PortalViewController.swift */,
 				53A58E2827070984008EC8D7 /* ManabaViewController.swift */,
-				53A58E2A2707099B008EC8D7 /* LabViewController.swift */,
-				531A0176270C8FBB00F4F55B /* AddDocumentViewController.swift */,
-				532D06D0270ED17C0010ABC4 /* AddToDoViewController.swift */,
 				53633A7D270EF392006C6802 /* TabbarViewController.swift */,
 			);
 			path = Controller;
@@ -99,6 +157,8 @@
 		53A58E22270707F8008EC8D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53E8EBED27109D6000E2FB72 /* ToDoModel.swift */,
+				53E8EBEF27109D7200E2FB72 /* DocumentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,10 +166,21 @@
 		53A58E2327070802008EC8D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53066BCA27FB17BE004F8A03 /* LabToDoTable */,
+				53066BC927FB179D004F8A03 /* DocumentTable */,
 				53A58E0D2706F8BA008EC8D7 /* AppDelegate.swift */,
 				53A58E0F2706F8BA008EC8D7 /* SceneDelegate.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		93A94E09C52777FDEF6622C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88E042DD2DBC2ED028A21B82 /* Pods-IbarakiUiniversityApp.debug.xcconfig */,
+				D16D301A054CBEDAFAF696CC /* Pods-IbarakiUiniversityApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53A58E1E2706F8BC008EC8D7 /* Build configuration list for PBXNativeTarget "IbarakiUiniversityApp" */;
 			buildPhases = (
+				28C09911647909F79EB3C316 /* [CP] Check Pods Manifest.lock */,
 				53A58E062706F8BA008EC8D7 /* Sources */,
 				53A58E072706F8BA008EC8D7 /* Frameworks */,
 				53A58E082706F8BA008EC8D7 /* Resources */,
+				5305DB8D27C8EF530028F472 /* ShellScript */,
+				2C953FB031B981CC945DD438 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +244,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C6629427F04B5200E82593 /* DocumentTableViewCell.xib in Resources */,
+				5309CBC627F467060072ED57 /* LabToDoTableViewCell.xib in Resources */,
 				53A58E1A2706F8BC008EC8D7 /* LaunchScreen.storyboard in Resources */,
 				53A58E172706F8BC008EC8D7 /* Assets.xcassets in Resources */,
 				53A58E152706F8BA008EC8D7 /* Main.storyboard in Resources */,
@@ -177,6 +253,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28C09911647909F79EB3C316 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IbarakiUiniversityApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C953FB031B981CC945DD438 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IbarakiUiniversityApp/Pods-IbarakiUiniversityApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IbarakiUiniversityApp/Pods-IbarakiUiniversityApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IbarakiUiniversityApp/Pods-IbarakiUiniversityApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5305DB8D27C8EF530028F472 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n${PODS_ROOT}/SwiftLint/swiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53A58E062706F8BA008EC8D7 /* Sources */ = {
@@ -186,12 +321,15 @@
 				53A58E2927070984008EC8D7 /* ManabaViewController.swift in Sources */,
 				531A0177270C8FBB00F4F55B /* AddDocumentViewController.swift in Sources */,
 				53A58E272707096D008EC8D7 /* PortalViewController.swift in Sources */,
-				53A58E122706F8BA008EC8D7 /* MainController.swift in Sources */,
+				53E8EBEE27109D6000E2FB72 /* ToDoModel.swift in Sources */,
 				532D06D1270ED17C0010ABC4 /* AddToDoViewController.swift in Sources */,
 				53A58E0E2706F8BA008EC8D7 /* AppDelegate.swift in Sources */,
 				53A58E102706F8BA008EC8D7 /* SceneDelegate.swift in Sources */,
 				53A58E252707091E008EC8D7 /* DocumentsListViewController.swift in Sources */,
+				5309CBC527F467060072ED57 /* LabToDoTableViewCell.swift in Sources */,
+				53C6629327F04B5200E82593 /* DocumentTableViewCell.swift in Sources */,
 				53633A7E270EF392006C6802 /* TabbarViewController.swift in Sources */,
+				53E8EBF027109D7200E2FB72 /* DocumentModel.swift in Sources */,
 				53A58E2B2707099B008EC8D7 /* LabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +474,7 @@
 		};
 		53A58E1F2706F8BC008EC8D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88E042DD2DBC2ED028A21B82 /* Pods-IbarakiUiniversityApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -366,6 +505,7 @@
 		};
 		53A58E202706F8BC008EC8D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D16D301A054CBEDAFAF696CC /* Pods-IbarakiUiniversityApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
