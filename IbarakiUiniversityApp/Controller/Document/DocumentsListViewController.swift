@@ -91,6 +91,14 @@ extension DocumentsListViewController: UITableViewDataSource {
             }
         }
     }
+
+    func diffdate(indexRow: Int) -> String {
+        let formatter = DateFormatter()
+        let submitdate = documentItems[indexRow].documentToDos[0].deadline
+        formatter.dateFormat = "MM/dd"
+        formatter.string(from: submitdate)
+        return "test"
+    }
 }
 
 extension DocumentsListViewController: UITableViewDelegate {
