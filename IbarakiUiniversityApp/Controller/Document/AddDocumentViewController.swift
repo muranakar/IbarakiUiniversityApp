@@ -57,7 +57,6 @@ class AddDocumentViewController: UIViewController {
     @IBAction private func addDocument(_ sender: Any) {
         if newDocumentTextField.text?.isEmpty != true {
             do {
-                let formatter = DateFormatter()
                 documentInfo.documentToDo = newDocumentTextField.text ?? ""
                 documentInfo.deadline = datePicker.date
 
