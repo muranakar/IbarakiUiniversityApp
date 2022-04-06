@@ -62,6 +62,7 @@ extension DocumentsListViewController: UITableViewDataSource {
         else {
             return UITableViewCell()
         }
+
         documentCell.documentNameLabel?.text = documentItems[indexPath.row].documentToDos[0].documentToDo
 //        documentCell.deadlineLabel.text = documentItems[indexPath.row].documentToDos[0].documentDeadline
         return documentCell
