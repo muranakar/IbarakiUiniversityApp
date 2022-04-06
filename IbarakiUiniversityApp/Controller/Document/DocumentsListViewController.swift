@@ -11,9 +11,9 @@ import RealmSwift
 class DocumentsListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
-    var documentItems: Results<DocumentList>!
-    var list: List<DocumentInfo>!
-    var documentinfo = DocumentInfo()
+    var documentItems: Results<SubmitDocumentList>!
+    var list: List<Documentinfo>!
+    var documentinfo = Documentinfo()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class DocumentsListViewController: UIViewController {
 
         do {
             let realm = try Realm()
-            documentItems = realm.objects(DocumentList.self)
+            documentItems = realm.objects(SubmitDocumentList.self)
         } catch {
             print("Error")
         }
@@ -63,7 +63,7 @@ extension DocumentsListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         documentCell.documentNameLabel?.text = documentItems[indexPath.row].documentToDos[0].documentToDo
-        documentCell.deadlineLabel.text = documentItems[indexPath.row].documentToDos[0].documentDeadline
+//        documentCell.deadlineLabel.text = documentItems[indexPath.row].documentToDos[0].documentDeadline
         return documentCell
     }
 
@@ -78,7 +78,7 @@ extension DocumentsListViewController: UITableViewDataSource {
             if documentItems.isEmpty != true {
                 do {
                     let realm = try Realm()
-                    documentItems = realm.objects(DocumentList.self)
+                    documentItems = realm.objects(SubmitDocumentList.self)
                     try realm.write {
                         realm.delete(documentItems[indexPath.row])
                     }

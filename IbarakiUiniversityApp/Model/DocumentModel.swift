@@ -8,11 +8,11 @@
 import Foundation
 import RealmSwift
 
-class DocumentInfo: Object {
+class Documentinfo: Object {
     @objc dynamic var documentToDo: String = ""
-    @objc dynamic var documentDeadline: String = ""
+    @objc dynamic var deadline: Date = Date()
 }
 
-class DocumentList: Object {
-    let documentToDos = List<DocumentInfo>()
+class SubmitDocumentList: Object {
+    let documentToDos = List<Documentinfo>()
 }

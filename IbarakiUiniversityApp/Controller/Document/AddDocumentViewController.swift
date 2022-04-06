@@ -13,8 +13,8 @@ class AddDocumentViewController: UIViewController {
     @IBOutlet private weak var addButon: UIButton!
     @IBOutlet private weak var datePicker: UIDatePicker!
 
-    let documentInfo = DocumentInfo()
-    var list: List<DocumentInfo>!
+    let documentInfo = Documentinfo()
+    var list: List<Documentinfo>!
 
     var picker: UIDatePicker = UIDatePicker()
 
@@ -38,7 +38,7 @@ class AddDocumentViewController: UIViewController {
 
         do {
             let realm = try Realm()
-            list = realm.objects(DocumentList.self).first?.documentToDos
+            list = realm.objects(SubmitDocumentList.self).first?.documentToDos
         } catch {
             print("Error")
         }
@@ -60,11 +60,13 @@ class AddDocumentViewController: UIViewController {
                 let formatter = DateFormatter()
                 documentInfo.documentToDo = newDocumentTextField.text ?? ""
                 formatter.dateFormat = "MM/dd"
-                documentInfo.documentDeadline = formatter.string(from: datePicker.date)
+//                documentInfo.documentDeadline = formatter.string(from: datePicker.date)
+                #warning("Date用")
+                documentInfo.deadline = datePicker.date
 
                 let realm = try Realm()
                 try realm.write {
-                    let documentList = DocumentList()
+                    let documentList = SubmitDocumentList()
                     documentList.documentToDos.append(documentInfo)
                     realm.add(documentList)
                 }
