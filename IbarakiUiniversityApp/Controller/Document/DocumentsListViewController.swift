@@ -95,11 +95,17 @@ extension DocumentsListViewController: UITableViewDataSource {
     }
 
     func diffdate(indexRow: Int) -> String {
-        let formatter = DateFormatter()
+        let now = Date()
+        let calender = Calendar(identifier: .gregorian)
         let submitdate = documentItems[indexRow].documentToDos[0].deadline
-        formatter.dateFormat = "MM/dd"
-        formatter.string(from: submitdate)
-        return "test"
+        let diff = calender.dateComponents([.day], from: now, to: submitdate)
+        if Int(diff.day!) > 0 {
+            return String(diff.day!)
+        } else if Int(diff.day!) == 0 {
+            return "今日が提出期限です"
+        } else {
+            return "提出期限が過ぎています"
+        }
     }
 }
 
