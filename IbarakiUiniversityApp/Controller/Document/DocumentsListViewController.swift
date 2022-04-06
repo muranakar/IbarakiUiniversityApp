@@ -11,9 +11,9 @@ import RealmSwift
 class DocumentsListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
-    var documentItems: Results<DocumentList>!
-    var list: List<DocumentInfo>!
-    var documentinfo = DocumentInfo()
+    var documentItems: Results<SubmitDocumentList>!
+    var list: List<Documentinfo>!
+    var documentinfo = Documentinfo()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class DocumentsListViewController: UIViewController {
 
         do {
             let realm = try Realm()
-            documentItems = realm.objects(DocumentList.self)
+            documentItems = realm.objects(SubmitDocumentList.self)
         } catch {
             print("Error")
         }
@@ -62,8 +62,10 @@ extension DocumentsListViewController: UITableViewDataSource {
         else {
             return UITableViewCell()
         }
+
         documentCell.documentNameLabel?.text = documentItems[indexPath.row].documentToDos[0].documentToDo
-        documentCell.deadlineLabel.text = documentItems[indexPath.row].documentToDos[0].documentDeadline
+        documentCell.deadlineLabel.text = diffdate(indexRow: indexPath.row)
+
         return documentCell
     }
 
@@ -78,7 +80,7 @@ extension DocumentsListViewController: UITableViewDataSource {
             if documentItems.isEmpty != true {
                 do {
                     let realm = try Realm()
-                    documentItems = realm.objects(DocumentList.self)
+                    documentItems = realm.objects(SubmitDocumentList.self)
                     try realm.write {
                         realm.delete(documentItems[indexPath.row])
                     }
@@ -89,6 +91,20 @@ extension DocumentsListViewController: UITableViewDataSource {
             } else {
                 return
             }
+        }
+    }
+
+    func diffdate(indexRow: Int) -> String {
+        let now = Date()
+        let calender = Calendar(identifier: .gregorian)
+        let submitdate = documentItems[indexRow].documentToDos[0].deadline
+        let diff = calender.dateComponents([.day], from: now, to: submitdate)
+        if Int(diff.day!) > 0 {
+            return String(diff.day!)
+        } else if Int(diff.day!) == 0 {
+            return "今日が提出期限です"
+        } else {
+            return "提出期限が過ぎています"
         }
     }
 }
