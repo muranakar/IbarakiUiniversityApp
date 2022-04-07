@@ -18,6 +18,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6g-Mq-z6i">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="研究室やることリスト" id="MC6-J7-iKa">
                                         <barButtonItem key="rightBarButtonItem" title="追加" id="qST-xl-lHv">
@@ -92,7 +93,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D1U-7v-r6a"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Sh7-67-J93" firstAttribute="top" secondItem="IAU-P9-f1H" secondAttribute="bottom" constant="2" id="84W-7R-iSa"/>
                             <constraint firstItem="IAU-P9-f1H" firstAttribute="top" secondItem="D1U-7v-r6a" secondAttribute="top" constant="5" id="XAi-xH-k9T"/>
@@ -219,7 +220,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M0C-b7-prH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="M0C-b7-prH" firstAttribute="trailing" secondItem="obA-3q-BUX" secondAttribute="trailing" constant="5" id="Hce-k1-s2d"/>
                             <constraint firstItem="obA-3q-BUX" firstAttribute="top" secondItem="M0C-b7-prH" secondAttribute="top" constant="5" id="ZyP-vZ-7o2"/>
@@ -260,6 +261,7 @@
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCt-Bt-LMR">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="提出物一覧" id="fSr-md-8DU">
                                         <barButtonItem key="rightBarButtonItem" title="追加" id="S8k-o1-NN3">
