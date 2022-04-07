@@ -15,7 +15,6 @@ class DocumentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        
         documentCell.layer.cornerRadius = 20.0
         documentCell.layer.shadowOffset = .init(width: 0.5, height: 0.5)
         documentCell.layer.shadowOpacity = 0.2
