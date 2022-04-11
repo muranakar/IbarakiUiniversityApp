@@ -9,7 +9,7 @@ import UIKit
 
 class LabToDoTableViewCell: UITableViewCell {
     @IBOutlet private(set) weak var todoLabel: UILabel!
-    @IBOutlet weak var todoContentView: UIView!
+    @IBOutlet private(set) weak var todoContentView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
