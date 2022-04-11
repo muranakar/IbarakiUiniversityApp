@@ -67,7 +67,7 @@ extension LabViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 100
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
