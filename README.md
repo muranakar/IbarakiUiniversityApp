@@ -18,3 +18,12 @@
 ## Second version
 
 ## DBをRealmSwiftに移行中、提出に締め切り日を設定中です。
+### 画面紹介
+<img src="https://user-images.githubusercontent.com/48234687/162731532-ac2aa797-72db-41fa-9580-078ca259cef9.png" width="320px">
+<img src="https://user-images.githubusercontent.com/48234687/162731698-9921a9e9-543b-49ed-9ed0-f1dda15a957c.png" width="320px">
+
+### 変更点
+
+- セルに締め切り日時を指定を行いました。
+- DBをUserDefalutからRealmSwiftに変更しました。
+
