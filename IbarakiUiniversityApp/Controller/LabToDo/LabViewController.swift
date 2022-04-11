@@ -61,8 +61,6 @@ extension LabViewController: UITableViewDataSource {
         }
         let toDoObject = toDoItems[indexPath.row]
         toDoCell.textLabel?.text = toDoObject.labTODO
-        toDoCell.textLabel?.textColor = .black
-        toDoCell.textLabel?.backgroundColor = .white
         return toDoCell
     }
 

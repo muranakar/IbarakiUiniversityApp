@@ -20,20 +20,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpq-Wf-Yni">
                         <rect key="frame" x="10" y="10" width="300" height="80"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eG-H1-c6a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eG-H1-c6a">
                                 <rect key="frame" x="10" y="25" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="3eG-H1-c6a" firstAttribute="top" secondItem="Gpq-Wf-Yni" secondAttribute="top" constant="25" id="CqX-vH-mFl"/>
-                            <constraint firstItem="3eG-H1-c6a" firstAttribute="leading" secondItem="Gpq-Wf-Yni" secondAttribute="leading" constant="10" id="Fan-H4-Yyu"/>
-                            <constraint firstAttribute="bottom" secondItem="3eG-H1-c6a" secondAttribute="bottom" constant="25" id="IOY-kQ-NN3"/>
-                            <constraint firstAttribute="trailing" secondItem="3eG-H1-c6a" secondAttribute="trailing" constant="10" id="fxJ-Lr-zsT"/>
-                        </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" red="0.54867941740000004" green="0.1482984916" blue="0.1894721653" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
