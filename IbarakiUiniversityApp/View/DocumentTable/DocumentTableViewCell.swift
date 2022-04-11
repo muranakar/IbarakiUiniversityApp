@@ -16,12 +16,10 @@ class DocumentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-//        documentCell.layer.cornerRadius = 20.0
-        documentCell.backgroundColor = .clear
-        documentCell.layer.shadowOffset = .init(width: 0.5, height: 0.5)
-        documentCell.layer.shadowOpacity = 0.2
-        documentCell.layer.shadowRadius = 20.0
         documentContetView.layer.cornerRadius = 20.0
+        documentContetView.layer.shadowOffset = .init(width: 0.25, height: 0.5)
+        documentContetView.layer.shadowOpacity = 0.3
+        documentContetView.layer.shadowRadius = 10.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
