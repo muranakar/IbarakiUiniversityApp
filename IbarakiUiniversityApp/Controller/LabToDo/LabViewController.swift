@@ -60,7 +60,7 @@ extension LabViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let toDoObject = toDoItems[indexPath.row]
-        toDoCell.textLabel?.text = toDoObject.labTODO
+        toDoCell.todoLabel?.text = toDoObject.labTODO
         return toDoCell
     }
 
