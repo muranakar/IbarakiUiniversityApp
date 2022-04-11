@@ -9,10 +9,14 @@ import UIKit
 
 class LabToDoTableViewCell: UITableViewCell {
     @IBOutlet private(set) weak var todoLabel: UILabel!
+    @IBOutlet private(set) weak var todoContentView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        todoContentView.layer.cornerRadius = 20.0
+        todoContentView.layer.shadowOffset = .init(width: 0.25, height: 0.5)
+        todoContentView.layer.shadowOpacity = 0.3
+        todoContentView.layer.shadowRadius = 10.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

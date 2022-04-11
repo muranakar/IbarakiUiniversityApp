@@ -93,14 +93,14 @@ extension DocumentsListViewController: UITableViewDataSource {
             }
         }
     }
-
+    #warning("強制オプショナルを治す")
     func diffdate(indexRow: Int) -> String {
         let now = Date()
         let calender = Calendar(identifier: .gregorian)
         let submitdate = documentItems[indexRow].documentToDos[0].deadline
         let diff = calender.dateComponents([.day], from: now, to: submitdate)
         if Int(diff.day!) > 0 {
-            return String(diff.day!)
+            return "締め切りまで \(Int(diff.day!)) 日です"
         } else if Int(diff.day!) == 0 {
             return "今日が提出期限です"
         } else {
@@ -112,9 +112,5 @@ extension DocumentsListViewController: UITableViewDataSource {
 extension DocumentsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
-    }
-
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = .clear
     }
 }

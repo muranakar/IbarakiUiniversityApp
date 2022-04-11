@@ -60,18 +60,8 @@ extension LabViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let toDoObject = toDoItems[indexPath.row]
-        toDoCell.textLabel?.text = toDoObject.labTODO
-        toDoCell.textLabel?.textColor = .black
-        toDoCell.textLabel?.backgroundColor = .white
+        toDoCell.todoLabel?.text = toDoObject.labTODO
         return toDoCell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -101,11 +91,9 @@ extension LabViewController: UITableViewDataSource {
         }
     }
 }
+
 extension LabViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = .clear
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
