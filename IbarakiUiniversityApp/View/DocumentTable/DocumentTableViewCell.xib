@@ -17,35 +17,50 @@
                 <rect key="frame" x="0.0" y="0.0" width="318" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E1-fx-MKN">
-                        <rect key="frame" x="10" y="98" width="301" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <color key="textColor" systemColor="systemRedColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWo-sB-cTZ">
-                        <rect key="frame" x="133" y="27" width="57" height="29"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4u-9Y-FXa">
+                        <rect key="frame" x="10" y="5" width="298" height="140"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWo-sB-cTZ">
+                        <rect key="frame" x="20" y="30" width="278" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E1-fx-MKN">
+                        <rect key="frame" x="36" y="95" width="246" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="L4u-9Y-FXa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="5oB-V7-Cts"/>
+                    <constraint firstItem="VWo-sB-cTZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="8iO-m1-4Mx"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="6E1-fx-MKN" secondAttribute="bottom" constant="20" id="Ax9-CK-Jth"/>
+                    <constraint firstAttribute="trailing" secondItem="L4u-9Y-FXa" secondAttribute="trailing" constant="10" id="K2V-OL-fqz"/>
+                    <constraint firstItem="L4u-9Y-FXa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Tka-kt-ZfV"/>
+                    <constraint firstItem="VWo-sB-cTZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="VP0-Cu-gXy"/>
+                    <constraint firstAttribute="trailing" secondItem="VWo-sB-cTZ" secondAttribute="trailing" constant="20" id="fDg-TQ-xce"/>
+                    <constraint firstItem="6E1-fx-MKN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="g0z-hN-pZa"/>
+                    <constraint firstAttribute="bottom" secondItem="L4u-9Y-FXa" secondAttribute="bottom" constant="5" id="lno-BU-5CU"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6E1-fx-MKN" secondAttribute="trailing" constant="20" id="rbX-Ni-GOa"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="deadlineLabel" destination="6E1-fx-MKN" id="aac-Ch-8pF"/>
                 <outlet property="documentCell" destination="H2p-sc-9uM" id="crf-UK-Vr4"/>
+                <outlet property="documentContetView" destination="L4u-9Y-FXa" id="w0j-5P-heb"/>
                 <outlet property="documentNameLabel" destination="VWo-sB-cTZ" id="E9I-bX-kIs"/>
             </connections>
             <point key="canvasLocation" x="849.27536231884062" y="71.651785714285708"/>
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
