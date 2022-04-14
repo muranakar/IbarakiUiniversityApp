@@ -93,7 +93,7 @@ extension DocumentsListViewController: UITableViewDataSource {
             }
         }
     }
-    #warning("強制オプショナルを治す")
+
     func diffdate(indexRow: Int) -> String {
         let now = Date()
         let calender = Calendar(identifier: .gregorian)
