@@ -93,15 +93,18 @@ extension DocumentsListViewController: UITableViewDataSource {
             }
         }
     }
-    #warning("強制オプショナルを治す")
+
     func diffdate(indexRow: Int) -> String {
         let now = Date()
         let calender = Calendar(identifier: .gregorian)
         let submitdate = documentItems[indexRow].documentToDos[0].deadline
         let diff = calender.dateComponents([.day], from: now, to: submitdate)
-        if Int(diff.day!) > 0 {
-            return "締め切りまで \(Int(diff.day!)) 日です"
-        } else if Int(diff.day!) == 0 {
+        guard let diffday = diff.day else {
+            return "提出期限が設定されていません"
+        }
+        if diffday > 0 {
+            return "締め切りまで \(diffday) 日です"
+        } else if diffday == 0 {
             return "今日が提出期限です"
         } else {
             return "提出期限が過ぎています"
