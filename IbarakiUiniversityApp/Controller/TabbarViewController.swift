@@ -7,6 +7,13 @@
 
 import UIKit
 
+enum TabBarItems {
+    case submitDocument
+    case labTodo
+    case portal
+    case manaba
+}
+
 class TabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
