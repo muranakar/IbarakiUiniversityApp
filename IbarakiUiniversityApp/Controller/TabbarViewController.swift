@@ -21,7 +21,9 @@ class TabbarViewController: UITabBarController {
 
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .badge]) { granted, error in
-
+            if let error = error {
+                print(error)
+            }
         }
         let application = UIApplication.shared
         // TODO: アイテムに追加や削除があったときに呼ぶ
