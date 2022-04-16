@@ -7,12 +7,17 @@
 
 import UIKit
 
+enum TabBarItems {
+    case submitDocument
+    case labTodo
+    case portal
+    case manaba
+}
+
 class TabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 0
-<<<<<<< Updated upstream
-=======
 
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .badge]) { _, error in
@@ -42,6 +47,6 @@ class TabbarViewController: UITabBarController {
         }
         // TODO: Itemのトータルを入れる
         app.applicationIconBadgeNumber = 10
->>>>>>> Stashed changes
+
     }
 }
