@@ -20,7 +20,7 @@ class TabbarViewController: UITabBarController {
         self.selectedIndex = 0
 
         let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .badge]) { granted, error in
+        center.requestAuthorization(options: [.alert, .badge]) { _, error in
             if let error = error {
                 print(error)
             }
@@ -47,5 +47,6 @@ class TabbarViewController: UITabBarController {
         }
         // TODO: Itemのトータルを入れる
         app.applicationIconBadgeNumber = 10
+
     }
 }
