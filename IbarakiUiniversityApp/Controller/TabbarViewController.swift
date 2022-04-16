@@ -7,9 +7,45 @@
 
 import UIKit
 
+enum TabBarItems {
+    case submitDocument
+    case labTodo
+    case portal
+    case manaba
+}
+
 class TabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 0
+
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge]) { granted, error in
+            if let error = error {
+                print(error)
+            }
+        }
+        let application = UIApplication.shared
+        // TODO: アイテムに追加や削除があったときに呼ぶ
+        addBadgeValue(item: .labTodo, app: application)
+    }
+
+    func addBadgeValue(item: TabBarItems, app: UIApplication) {
+        let tabBarItems: TabBarItems = item
+
+        switch tabBarItems {
+        case .submitDocument:
+            let submitDocumentTabItem: UITabBarItem = tabBar.items![0]
+            // TODO: valueにアイテムの数を入れる
+            submitDocumentTabItem.badgeValue = "1"
+        case .labTodo:
+            // TODO: valueにアイテムの数を入れる
+            let labToDoTabItem: UITabBarItem = tabBar.items![1]
+            labToDoTabItem.badgeValue = "2"
+        default :
+            print("manabaかポータルだね")
+        }
+        // TODO: Itemのトータルを入れる
+        app.applicationIconBadgeNumber = 10
     }
 }
