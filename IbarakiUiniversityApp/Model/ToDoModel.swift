@@ -8,6 +8,11 @@
 import Foundation
 import RealmSwift
 
+protocol ExchangeData {
+    func receveData ()
+    func tranceData ()
+}
+
 class ToDoModel: Object {
     @objc dynamic var labTODO: String?
 }
