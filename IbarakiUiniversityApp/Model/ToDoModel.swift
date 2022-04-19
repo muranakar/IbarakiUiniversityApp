@@ -16,3 +16,15 @@ protocol ExchangeData {
 class ToDoModel: Object {
     @objc dynamic var labTODO: String?
 }
+
+class ExchangeToDoModel: ExchangeData {
+    var toDoItems: Results<ToDoModel>!
+
+    func receveData() {
+        <#code#>
+    }
+
+    func tranceData() {
+        <#code#>
+    }
+}
