@@ -27,9 +27,10 @@
 		53E8EBF027109D7200E2FB72 /* DocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8EBEF27109D7200E2FB72 /* DocumentModel.swift */; };
 		5D564DF0AF03A309A908FAEE /* Pods_IbarakiUiniversityApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF31067AD0E10D906FA1207 /* Pods_IbarakiUiniversityApp.framework */; };
 		B2F01151280F878B00107563 /* RealmDocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F01150280F878B00107563 /* RealmDocumentModel.swift */; };
-		B2F01153280F87A100107563 /* RealmToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F01152280F87A100107563 /* RealmToDoModel.swift */; };
+		B2F01153280F87A100107563 /* RealmToDoModel+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F01152280F87A100107563 /* RealmToDoModel+Repository.swift */; };
 		B2F01157280F881A00107563 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F01156280F881A00107563 /* ToDo.swift */; };
 		B2F01159280F882600107563 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F01158280F882600107563 /* Document.swift */; };
+		B2F0115B280F8BFC00107563 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F0115A280F8BFC00107563 /* RealmRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,9 +57,10 @@
 		53E8EBEF27109D7200E2FB72 /* DocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentModel.swift; sourceTree = "<group>"; };
 		88E042DD2DBC2ED028A21B82 /* Pods-IbarakiUiniversityApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbarakiUiniversityApp.debug.xcconfig"; path = "Target Support Files/Pods-IbarakiUiniversityApp/Pods-IbarakiUiniversityApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B2F01150280F878B00107563 /* RealmDocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDocumentModel.swift; sourceTree = "<group>"; };
-		B2F01152280F87A100107563 /* RealmToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmToDoModel.swift; sourceTree = "<group>"; };
+		B2F01152280F87A100107563 /* RealmToDoModel+Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealmToDoModel+Repository.swift"; sourceTree = "<group>"; };
 		B2F01156280F881A00107563 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		B2F01158280F882600107563 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		B2F0115A280F8BFC00107563 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		D16D301A054CBEDAFAF696CC /* Pods-IbarakiUiniversityApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IbarakiUiniversityApp.release.xcconfig"; path = "Target Support Files/Pods-IbarakiUiniversityApp/Pods-IbarakiUiniversityApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,8 +198,9 @@
 		B2F01154280F87D900107563 /* RealmModel */ = {
 			isa = PBXGroup;
 			children = (
-				B2F01152280F87A100107563 /* RealmToDoModel.swift */,
+				B2F01152280F87A100107563 /* RealmToDoModel+Repository.swift */,
 				B2F01150280F878B00107563 /* RealmDocumentModel.swift */,
+				B2F0115A280F8BFC00107563 /* RealmRepository.swift */,
 			);
 			path = RealmModel;
 			sourceTree = "<group>";
@@ -351,7 +354,7 @@
 				53A58E272707096D008EC8D7 /* PortalViewController.swift in Sources */,
 				53E8EBEE27109D6000E2FB72 /* ToDoModel.swift in Sources */,
 				532D06D1270ED17C0010ABC4 /* AddToDoViewController.swift in Sources */,
-				B2F01153280F87A100107563 /* RealmToDoModel.swift in Sources */,
+				B2F01153280F87A100107563 /* RealmToDoModel+Repository.swift in Sources */,
 				53A58E0E2706F8BA008EC8D7 /* AppDelegate.swift in Sources */,
 				53A58E102706F8BA008EC8D7 /* SceneDelegate.swift in Sources */,
 				53A58E252707091E008EC8D7 /* DocumentsListViewController.swift in Sources */,
@@ -363,6 +366,7 @@
 				53633A7E270EF392006C6802 /* TabbarViewController.swift in Sources */,
 				53E8EBF027109D7200E2FB72 /* DocumentModel.swift in Sources */,
 				53A58E2B2707099B008EC8D7 /* LabViewController.swift in Sources */,
+				B2F0115B280F8BFC00107563 /* RealmRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

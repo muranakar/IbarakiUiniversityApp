@@ -8,6 +8,11 @@
 import Foundation
 
 struct ToDo {
-    var uuid = UUID()
-    var labToDo: String
+    var uuid: UUID? {
+        UUID(uuidString: uuidString)
+    }
+    var uuidString = UUID().uuidString
+    var labToDo: String?
 }
+
+

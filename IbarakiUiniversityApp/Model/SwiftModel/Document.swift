@@ -8,7 +8,10 @@
 import Foundation
 
 struct DocumentInfo {
-    var uuid: UUID = UUID()
+    var uuid: UUID? {
+        UUID(uuidString: uuidString)
+    }
+    var uuidString = UUID().uuidString
     var documentToDo: String
     var deadLine: Date
 }
